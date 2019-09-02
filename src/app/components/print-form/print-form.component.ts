@@ -25,9 +25,10 @@ export class PrintFormComponent implements OnInit {
     //this.sub = this.route.snapshot.queryParamMap.get('selectedMenu');
   }
 
-  getMenu() {
+  print() {
     //console.log(JSON.stringify(this.selectedMenu))
     //console.log(JSON.stringify(this.sub))
+    window.print();
   }
 
 }

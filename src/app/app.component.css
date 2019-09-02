@@ -7,3 +7,9 @@
     width: 100%;
     height: 200px;
   }
+
+  @media print {
+    :not(.print) {
+      display: none !important;
+    }
+  }
