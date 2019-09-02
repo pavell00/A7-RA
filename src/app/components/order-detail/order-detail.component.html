@@ -1,0 +1,99 @@
+<div id="print-section">
+  <div *ngIf="orderId || selectedMenu?.length">
+    <ul class="heroes">
+      <li *ngFor="let emp of selectedMenu" (click)="openDialog(emp)">
+        {{emp.name}} {{emp.price}} {{emp.qty}} {{emp.discount}}
+          <button mat-mini-fab (click)="onDelete(emp.id)">X</button>
+      </li>
+    </ul>
+    <button (click)="onSave()">Save</button>
+    <!--<table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Перечень заказа</th>
+        </tr>
+        <th>Название</th>
+        <th>Цена</th>
+        <th>кол-во</th>
+        <th>Дисконт</th>
+        <th>Del</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of selectedMenu">
+          <td (click)="openDialog(emp)">{{emp.name}}</td>
+          <td (click)="openDialog(emp)">{{emp.price}}</td>
+          <td (click)="openDialog(emp)">{{emp.qty}}</td>
+          <td (click)="openDialog(emp)">{{emp.discount}}</td>
+          <td><button class="btn text-danger" (click)="onDelete(emp.id)">X</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <button (click)="onSave()">Save</button>-->
+    <!--<button (click)="getOrder()">getOrder</button>-->
+  </div>
+</div>
+<button (click)="print()">print</button>
+<button (click)="printForm()">PrintForm</button>
+
+<mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Поиск">
+</mat-form-field>
+  <mat-form-field style="width: 15%;">
+    <input matInput [(ngModel)]="orderNo" placeholder="Номер стола">
+</mat-form-field>
+<mat-form-field>
+    <input matInput [(ngModel)]="orderDate" placeholder="Дата / время стола">
+</mat-form-field>
+<mat-form-field style="text-align: right; width: 20%;">
+    <input matInput type="number"  [(ngModel)]="orderSum" placeholder="Сумма счета">
+</mat-form-field>
+<mat-form-field style="text-align: right; width: 10%;">
+    <input matInput type="number" [(ngModel)]="orderDiscount" placeholder="Дисконт">
+</mat-form-field>
+<mat-form-field style="text-align: right;">
+    <input matInput type="number" [(ngModel)]="orderDiscountSum" placeholder="Сумма дисконта">
+</mat-form-field>
+<mat-form-field style="text-align: right;">
+    <input matInput type="number" [(ngModel)]="orderSumService" placeholder="Сумма обслуживания">
+</mat-form-field>
+<mat-form-field style="text-align: right;">
+    <input matInput type="number" [(ngModel)]="orderSumToPay" placeholder="Сумма к оплате">
+</mat-form-field>
+
+<table mat-table [dataSource]="filteredMenulist" class="mat-elevation-z8">
+  <!-- Add Column -->
+    <ng-container matColumnDef="add">
+        <th mat-header-cell *matHeaderCellDef>add</th>
+        <td mat-cell *matCellDef="let element">
+            <button mat-mini-fab aria-label="Example icon-button with a heart icon" (click)="onAdd(element)">
+                <a mat-mini-fab >
+                  <mat-icon class="md-18">add</mat-icon>
+                </a>
+              </button>
+        </td>
+      </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="price">
+    <th mat-header-cell *matHeaderCellDef> Price </th>
+    <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="qty">
+    <th mat-header-cell *matHeaderCellDef> Qty </th>
+    <td mat-cell *matCellDef="let element"> {{element.qty}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="discount">
+    <th mat-header-cell *matHeaderCellDef> Discount </th>
+    <td mat-cell *matCellDef="let element"> {{element.discount}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+  </tr>
+</table>

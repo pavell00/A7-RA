@@ -1,0 +1,63 @@
+<table mat-table [dataSource]="orders" class="mat-elevation-z8">
+  <ng-container matColumnDef="TableNo">
+    <th mat-header-cell *matHeaderCellDef>Стол</th>
+    <td mat-cell *matCellDef="let element" (click)="editOrder(element.id)"> {{element.TableNo}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="OrderDate">
+    <th mat-header-cell *matHeaderCellDef>Дата / Время</th>
+    <td mat-cell *matCellDef="let element" (click)="editOrder(element.id)"> {{element.OrderDate}} </td>
+  </ng-container>
+  
+  <ng-container matColumnDef="sumOrder">
+    <th mat-header-cell *matHeaderCellDef>Сумма</th>
+    <td mat-cell *matCellDef="let element" (click)="editOrder(element.id)"> {{element.sumOrder}} </td>
+  </ng-container>
+  
+  <ng-container matColumnDef="discountOrder">
+    <th mat-header-cell *matHeaderCellDef> +/- </th>
+    <td mat-cell *matCellDef="let element" (click)="editOrder(element.id)"> {{element.discountOrder}} </td>
+  </ng-container>
+
+  <!--<ng-container matColumnDef="isDone">
+    <th mat-header-cell *matHeaderCellDef>Done</th>
+    <td mat-cell *matCellDef="let element"> {{element.isDone}} </td>
+  </ng-container>-->
+
+  <!--<ng-container matColumnDef="Actions">
+    <mat-header-cell  *matHeaderCellDef > Actions </mat-header-cell>
+    <mat-cell *matCellDef="let row" >
+        <button mat-mini-fab aria-label="Example icon-button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+    </mat-cell>
+  </ng-container>-->
+  
+  <ng-container matColumnDef="Actions">
+      <th mat-header-cell *matHeaderCellDef>Actions</th>
+      <td mat-cell *matCellDef="let element">
+          <!--<button mat-mini-fab aria-label="Example icon-button with a heart icon" (click)="editOrder(element.id)">
+            <a mat-mini-fab >
+              <mat-icon class="md-14">edit</mat-icon>
+            </a>
+          </button>-->
+          <button mat-mini-fab aria-label="Example icon-button with a heart icon" (click)="createPrintForm(element.id)">
+            <a mat-mini-fab >
+              <mat-icon class="md-14">file_copy</mat-icon>
+            </a>
+          </button>
+          <button mat-mini-fab aria-label="Example icon-button with a heart icon" (click)="delteOrder(element.id)">
+            <a mat-mini-fab >
+              <mat-icon class="md-14">delete</mat-icon>
+            </a>
+          </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;" [ngClass]="{'order-done': row.isDone, 'order-open': !row.isDone}"></tr>
+</table>
+
+<div>
+  <button mat-mini-fab color="primary" (click)="onCreateOrder()"><mat-icon>add</mat-icon></button>
+</div>
