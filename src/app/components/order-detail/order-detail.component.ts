@@ -41,7 +41,10 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
   orderGuests: number = 1;
   newData: any;
   printTime: string = '';
-  testData: any
+  place: string = '';
+  printed: string = '';
+  waiter: string = '';
+  tableheader: string = '';
 
   constructor(private dataService: DataService, private route: ActivatedRoute, private router: Router,
     private firestore: AngularFirestore, public dialog: MatDialog, private toastr: ToastrService) {
@@ -97,7 +100,10 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
         sumService: this.orderSumService,
         sumToPay: this.orderSumToPay,
         orderGuests: this.orderGuests,
-        printTime: this.printTime
+        printTime: this.printTime,
+        place: this.place,
+        printed: this.printed,
+        waiter: this.waiter
         //isDone: true, this.orderSumToPay = this.orderSumService;
       });
       this.storeOrderItems(this.orderId);
@@ -152,7 +158,10 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
         orderDate: this.orderDate,
         orderNo: this.orderNo,
         orderGuests: this.orderGuests,
-        printTime: this.printTime
+        printTime: this.printTime,
+        place: this.place,
+        printed: this.printed,
+        waiter: this.waiter
       },
     };
     this.router.navigate(['/print-form'], navigationExtras);
@@ -222,6 +231,9 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
             this.orderSumToPay = doc.data().sumToPay;
             this.orderGuests = doc.data().guests;
             this.printTime = doc.data().printTime;
+            this.place = doc.data().place;
+            this.printed = doc.data().printed;
+            this.waiter = doc.data().waiter;
           }
         )
       }
