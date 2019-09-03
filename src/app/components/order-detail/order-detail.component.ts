@@ -44,7 +44,6 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
   place: string = '';
   printed: string = '';
   waiter: string = '';
-  tableheader: string = '';
 
   constructor(private dataService: DataService, private route: ActivatedRoute, private router: Router,
     private firestore: AngularFirestore, public dialog: MatDialog, private toastr: ToastrService) {
@@ -154,7 +153,7 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
   printForm() {
     let navigationExtras: NavigationExtras = { queryParams: 
       { selectedMenu: JSON.stringify(this.selectedMenu), 
-        orderSum: this.orderSum,
+        orderSum: this.orderSum.toFixed(2),
         orderDate: this.orderDate,
         orderNo: this.orderNo,
         orderGuests: this.orderGuests,

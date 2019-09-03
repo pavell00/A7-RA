@@ -25,7 +25,7 @@ export class PrintFormComponent implements OnInit {
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       this.selectedMenu = JSON.parse(params['selectedMenu']);
-      this.orderSum =  params['orderSum'];
+      this.orderSum = params['orderSum'];
       this.orderDate = params['orderDate'];
       this.orderNo = params['orderNo'];
       this.orderGuests = params['orderGuests'];
@@ -33,7 +33,6 @@ export class PrintFormComponent implements OnInit {
       this.printed = params['printed'];
       this.waiter = params['waiter'];
       this.printTime = params['printTime'];
-      //this.tableheader = params['tableheader'];
     });
     /*this.dataService.getParams().get().toPromise().then(
       param => {//console.log("params data:", doc.data())
