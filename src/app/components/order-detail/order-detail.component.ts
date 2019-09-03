@@ -30,7 +30,7 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
   subscription: Subscription;
 
   orderDate: string = new Date().toLocaleString();
-  orderNo: string = 'Стол № 1';
+  orderNo: string = '1';
   orderId: string;
   orderSum: number = 0.0;
   orderDiscount: number = 0.0;
@@ -38,7 +38,9 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
   orderIsDone: boolean;
   orderSumToPay: number = 0.0;
   orderSumService: number = 0.0;
+  orderGuests: number = 1;
   newData: any;
+  printTime: string = '';
   testData: any
 
   constructor(private dataService: DataService, private route: ActivatedRoute, private router: Router,
@@ -93,7 +95,9 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
         discountOrder: this.orderDiscount,
         sumDiscount: this.orderDiscountSum,
         sumService: this.orderSumService,
-        sumToPay: this.orderSumToPay
+        sumToPay: this.orderSumToPay,
+        orderGuests: this.orderGuests,
+        printTime: this.printTime
         //isDone: true, this.orderSumToPay = this.orderSumService;
       });
       this.storeOrderItems(this.orderId);
@@ -146,7 +150,9 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
       { selectedMenu: JSON.stringify(this.selectedMenu), 
         orderSum: this.orderSum,
         orderDate: this.orderDate,
-        orderNo: this.orderNo
+        orderNo: this.orderNo,
+        orderGuests: this.orderGuests,
+        printTime: this.printTime
       },
     };
     this.router.navigate(['/print-form'], navigationExtras);
@@ -214,6 +220,8 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
             this.orderDiscountSum = doc.data().sumDiscount;
             this.orderSumService = doc.data().sumService;
             this.orderSumToPay = doc.data().sumToPay;
+            this.orderGuests = doc.data().guests;
+            this.printTime = doc.data().printTime;
           }
         )
       }

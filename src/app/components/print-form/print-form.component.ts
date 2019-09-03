@@ -12,6 +12,7 @@ export class PrintFormComponent implements OnInit {
   orderSum: number;
   orderDate: string;
   orderNo: string;
+  orderGuests: number;
 
   constructor(private route: ActivatedRoute) { }
 
@@ -21,6 +22,7 @@ export class PrintFormComponent implements OnInit {
       this.orderSum =  params['orderSum'];
       this.orderDate = params['orderDate'];
       this.orderNo = params['orderNo'];
+      this.orderGuests = params['orderGuests'];
     });
     //this.sub = this.route.snapshot.queryParamMap.get('selectedMenu');
   }
