@@ -48,6 +48,7 @@ import { PrintFormComponent } from './components/print-form/print-form.component
     ],
   providers: [DataService, 
     { provide: MatDialogRef, useValue: {close: (dialogResult: any) => { }}},
+    //{ provide: MatDialogRef},
     { provide: MAT_DIALOG_DATA, useValue: [] }
   ],
   exports: [AppRoutingModule],
