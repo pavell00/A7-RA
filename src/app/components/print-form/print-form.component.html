@@ -7,29 +7,46 @@
     <div>
       <p>Зал: {{ place }}</p> 
       <p><b>Стол: {{ orderNo }}</b></p>
-      <p>Открыт: {{ orderDate }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        Гостей: {{ orderGuests }}</p>
+      <div style="display: flex; justify-content: space-between;">
+        <div>Открыт: {{ orderDate }}</div> <div>Гостей: {{ orderGuests }}</div>
+      </div>
+      
       <p>Офиц: {{ waiter }}</p>
       <p>Напечатал: {{ printed }}</p>
       <p>Печать: {{ printTime }}</p>
-      <p><b><u>Наименование &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;
-         К-во&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Сумма</u></b></p>
     </div>
 
-    <div style="text-decoration: overline;">
-      <p><b style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        К оплате: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-         {{ orderSum }}</b></p>
-    </div>
+    <table style="line-height: 1.1; border-collapse: collapse;">
+      <thead style="text-align: left;">
+        <!--<tr>
+          <th>Перечень заказа</th>
+        </tr>-->
+        <th style="width: 150px; border-bottom: 1px solid black;">Наименование</th>
+        <th style="width: 40px; border-bottom: 1px solid black;">К-во</th>
+        <th style="width: 50px; text-align: right; border-bottom: 1px solid black;">Сумма</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of selectedMenu">
+          <td >{{emp.name}}</td>
+          <td style="text-align: center">{{emp.qty}}</td>
+          <td style="text-align: right;">{{emp.price * emp.qty}}</td>
+        </tr>
+        <tr>
+          <td style="line-height: 0.2; width: 150px; text-align: right; border-top: 1px solid black;"></td>
+          <td style="line-height: 0.2; width: 40px; text-align: right; border-top: 1px solid black;"></td>
+          <td style="line-height: 0.2; width: 50px; text-align: right; border-top: 1px solid black;"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table style="line-height: 1.1; border-collapse: collapse;">
+      <thead style="text-align: left; font-size: 18px;">
+        <th style="width: 200px; border-top: 1px solid black; text-align: center;"><b>К оплате:</b></th>
+        <th style="width: 40px; border-top: 1px solid black; text-align: right;"><b>{{ orderSum }}</b></th>
+      </thead>
+    </table>
+
 </div>
-
 
 <!--<p>{{orderDate}}</p>
 <p>{{orderNo}}</p>
@@ -37,5 +54,5 @@
 <mat-list>
   <mat-list-item *ngFor="let item of selectedMenu">{{ item.name }} {{item.price * item.qty}}</mat-list-item>
 </mat-list>
--->
 <button (click)="print()">print</button>
+-->
