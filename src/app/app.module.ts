@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'; 
 import { FormsModule } from '@angular/forms';
 
@@ -40,7 +40,8 @@ import { PrintFormComponent } from './components/print-form/print-form.component
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
-    MatFormFieldModule, MatTableModule, MatIconModule, MatDialogModule,
+    MatIconModule, MatButtonModule,
+    MatFormFieldModule, MatTableModule, MatDialogModule,
     MatInputModule, MatOptionModule, MatSelectModule, MatCheckboxModule,
     MatListModule,
     ToastrModule.forRoot(),
@@ -48,7 +49,6 @@ import { PrintFormComponent } from './components/print-form/print-form.component
     ],
   providers: [DataService, 
     { provide: MatDialogRef, useValue: {close: (dialogResult: any) => { }}},
-    //{ provide: MatDialogRef},
     { provide: MAT_DIALOG_DATA, useValue: [] }
   ],
   exports: [AppRoutingModule],

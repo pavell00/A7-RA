@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router';
-import * as copy from 'copy-to-clipboard';
+//import * as copy from 'copy-to-clipboard';
 //import copy from 'copy-to-clipboard';
 import { Order } from '../../models/order';
 import { menuItem } from '../../models/menuItem';
