@@ -50,10 +50,6 @@ export class OrderListComponent implements OnInit {
     this.router.navigate(['/order-detail'], navigationExtras);
   }
 
-  createPrintForm(id: string) {
-    this.makeHeader2(id);
-  }
-
   makeHeader(id: string) {
     //Чек # 192264  стол # VIP005       Гостей 4
     //05.07.19      открыт 20:30    печать 00:05

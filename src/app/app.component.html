@@ -3,17 +3,11 @@
   <h3>
     Welcome to {{ title }}!
   </h3>
-
+  <button (click)="print()">print</button>
   <div>
     <a [routerLink]="['/order-list']">Список Заказов</a>
     <a [routerLink]="['/order-create']">Создание заказа</a>
-    <!--<a [routerLink]="['/order-detail']">Создание заказа</a>-->
     <a [routerLink]="['/menu-list']">Работа с меню</a>
   </div>
-<!--T<div class="example-container">
-    <mat-form-field>
-      <textarea matInput rows="20" placeholder="Textarea" value="{{myCheck}}"></textarea>
-    </mat-form-field>
-  </div>-->
 </div>
 <router-outlet></router-outlet>
