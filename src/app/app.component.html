@@ -1,13 +1,21 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h3>
     Welcome to {{ title }}!
   </h3>
-  <button (click)="print()">print</button>
   <div>
-    <a [routerLink]="['/order-list']">Список Заказов</a>
-    <a [routerLink]="['/order-create']">Создание заказа</a>
-    <a [routerLink]="['/menu-list']">Работа с меню</a>
+      <button mat-mini-fab color="primary" [routerLink]="['/order-list']">
+        <i class="material-icons">list</i>
+      </button>
+      <button mat-mini-fab color="warn" [routerLink]="['/order-create']">
+        <i class="material-icons">playlist_add</i>
+      </button>
+      <button mat-mini-fab color="primary" [routerLink]="['/menu-list']">
+        <i class="material-icons">format_list_bulleted</i>
+      </button>
+      <button mat-mini-fab color="primary" (click)="print()">
+        <i class="material-icons">print</i>
+      </button>
   </div>
 </div>
+
 <router-outlet></router-outlet>
