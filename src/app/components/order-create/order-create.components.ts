@@ -19,6 +19,10 @@ export class OrderCreateComponent implements OnInit {
     orderGuests: number = 1;
     orderPrintTime: string = '00:00';
     orderCheck: number = 1;
+    orderSumService: number = 0;
+    place: string = 'Зал';
+    waiter: string = 'Кулешов Андрей';
+    printed: string= 'Кулешов Андрей';
 
     constructor(private dataService: DataService,
     private firestore: AngularFirestore,
@@ -38,10 +42,14 @@ export class OrderCreateComponent implements OnInit {
         TableNo: this.orderNo,
         sumOrder: this.orderSum,
         discountOrder: this.orderDiscount,
+        sumService: this.orderSumService,
         isDone: false,
         guests: this.orderGuests,
         check: this.orderCheck,
-        printTime: this.orderPrintTime
+        printTime: this.orderPrintTime,
+        place: this.place,
+        printed: this.printed,
+        waiter: this.waiter
       }).then(
         (w) => {
           //this.orderId = w.id;

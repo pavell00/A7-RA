@@ -36,8 +36,8 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
   orderDiscount: number = 0.0;
   orderDiscountSum: number = 0.0;
   orderIsDone: boolean;
-  orderSumToPay: number = 0.0;
-  orderSumService: number = 0.0;
+  orderSumToPay: number = 1.0;
+  orderSumService: number = 1.0;
   orderGuests: number = 1;
   newData: any;
   printTime: string = '';
