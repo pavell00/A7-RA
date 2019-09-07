@@ -35,7 +35,7 @@ export class PrintFormComponent implements OnInit {
       this.place = params['place'];
       this.printed = params['printed'];
       this.waiter = params['waiter'];
-      this.printTime = params['printTime'];
+      this.printTime = new Date().toLocaleString('ru').replace(',', '');//params['printTime'];
     });
     this.dataService.getParams().get().toPromise().then(
       param => {//console.log("params data:", doc.data())
