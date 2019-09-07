@@ -3,7 +3,7 @@ import { menuItem } from '../../models/menuItem';
 import { DataService } from '../../services/data.service';
 import { Router } from '@angular/router';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { ToastrService } from 'ngx-toastr';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'menu-list',
@@ -16,7 +16,7 @@ export class MenuListComponent implements OnInit {
   
   constructor(private dataService: DataService, private router : Router,
     private firestore: AngularFirestore,
-    private toastr:ToastrService) { }
+    private _snackBar: MatSnackBar) { }
 
   ngOnInit() {
     this.dataService.getMenuList().subscribe(actionArray => {
@@ -37,8 +37,12 @@ export class MenuListComponent implements OnInit {
   onDelete(id: string) {
     if (confirm("вы уверенны что хотите удалить запись?")) {
       this.firestore.doc('menulist/' + id).delete();
-      this.toastr.warning('Запись удалена','EMP. Register');
+      this.openSnackBar();
     }
+  }
+
+  openSnackBar() {
+    this._snackBar.open('Сохраниение зказа...', 'завершено!', {duration: 1000, verticalPosition: 'top'})
   }
 
 }

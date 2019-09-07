@@ -13,7 +13,6 @@ import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
-import { ToastrModule } from 'ngx-toastr';
 
 import { DataService } from './services/data.service';
 import { AppRoutingModule } from './app-routing.module';
@@ -46,8 +45,7 @@ import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
     MatFormFieldModule, MatTableModule, MatDialogModule,
     MatInputModule, MatOptionModule, MatSelectModule, MatCheckboxModule,
     MatListModule,
-    ToastrModule.forRoot(),
-    HttpClientModule
+     HttpClientModule
     ],
   providers: [DataService, 
     { provide: MatDialogRef, useValue: {close: (dialogResult: any) => { }}},

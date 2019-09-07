@@ -6,8 +6,6 @@ import { Order } from '../../models/order';
 import { menuItem } from '../../models/menuItem';
 import { DataService } from '../../services/data.service';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { ToastrService } from 'ngx-toastr';
-import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'orders-list',
@@ -24,8 +22,7 @@ export class OrderListComponent implements OnInit {
   maxLength: number;
   maxLengthFoodName: number;
 
-  constructor(private dataService: DataService, private router : Router,private firestore: AngularFirestore, 
-    private toastr:ToastrService) { }
+  constructor(private dataService: DataService, private router : Router,private firestore: AngularFirestore) { }
 
   ngOnInit(): void {
     this.displayedColumns = ['TableNo','OrderDate','sumOrder','discountOrder','Actions'];
