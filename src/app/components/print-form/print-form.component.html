@@ -40,14 +40,18 @@
     </tbody>
   </table>
 
-  <table style="line-height: 1.1; border-collapse: collapse;">
+  <!--<table style="line-height: 1.1; border-collapse: collapse;">
     <thead style="text-align: left; font-size: 18px;">
       <th style="border-top: 1px solid black; text-align: center;"><b>К оплате:</b></th>
       <th style="border-top: 1px solid black; text-align: right;"><b>{{ orderSum }}</b></th>
     </thead>
-  </table>
+  </table>-->
+  <div style="border-top: 1px solid black; padding-left: 100px; font-size: 19px; margin-top: 1px;">
+    <b style="line-height:20px">К оплате:</b>
+    <b style="line-height:20px; float: right;">{{ orderSum }}</b>
+  </div>
 
-  <div style="text-align: center;">
+  <div style="margin-top: 20px; text-align: center;">
     <p><b>{{footerStr}}</b></p>
     <p><b>{{footerStr1}}</b></p>
     <p><b>{{footerStr2}}</b></p>

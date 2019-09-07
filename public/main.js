@@ -6358,7 +6358,7 @@ Zone.__load_patch('PromiseRejectionEvent', function (global, Zone) {
 /*! exports provided: name, version, private, dependencies, scripts, devDependencies, default */
 /***/ (function(module) {
 
-module.exports = {"name":"angular","version":"0.1.5","private":true,"dependencies":{"@angular/animations":"8.2.0","@angular/cdk":"7.3.7","@angular/common":"8.2.0","@angular/compiler":"8.2.0","@angular/core":"8.2.0","@angular/fire":"5.2.1","@angular/forms":"8.2.0","@angular/material":"7.3.7","@angular/platform-browser":"8.2.0","@angular/platform-browser-dynamic":"8.2.0","@angular/router":"8.2.0","core-js":"2.6.9","firebase":"6.3.4","hammerjs":"2.0.8","material-design-icons":"^3.0.1","ngx-toastr":"9.2.0","rxjs":"6.5.2","zone.js":"0.9.1"},"scripts":{"ng":"ng","start":"ng serve -o","build":"ng build","test":"ng test","lint":"ng lint","e2e":"ng e2e"},"devDependencies":{"@angular-devkit/build-angular":"~0.10.0","@angular/cli":"~7.0.2","@angular/compiler-cli":"~7.0.0","@angular/language-service":"~7.0.0","@types/node":"~8.9.4","@types/jasmine":"~2.8.8","@types/jasminewd2":"~2.0.3","codelyzer":"~4.5.0","jasmine-core":"~2.99.1","jasmine-spec-reporter":"~4.2.1","karma":"~3.0.0","karma-chrome-launcher":"~2.2.0","karma-coverage-istanbul-reporter":"~2.0.1","karma-jasmine":"~1.1.2","karma-jasmine-html-reporter":"^0.2.2","protractor":"~5.4.0","ts-node":"~7.0.0","tslint":"~5.11.0","typescript":"~3.1.1"}};
+module.exports = {"name":"angular","version":"0.1.7","private":true,"dependencies":{"@angular/animations":"8.2.0","@angular/cdk":"7.3.7","@angular/common":"8.2.0","@angular/compiler":"8.2.0","@angular/core":"8.2.0","@angular/fire":"5.2.1","@angular/forms":"8.2.0","@angular/material":"7.3.7","@angular/platform-browser":"8.2.0","@angular/platform-browser-dynamic":"8.2.0","@angular/router":"8.2.0","core-js":"2.6.9","firebase":"6.3.4","hammerjs":"2.0.8","material-design-icons":"^3.0.1","rxjs":"6.5.2","zone.js":"0.9.1"},"scripts":{"ng":"ng","start":"ng serve -o","build":"ng build","test":"ng test","lint":"ng lint","e2e":"ng e2e"},"devDependencies":{"@angular-devkit/build-angular":"~0.10.0","@angular/cli":"~7.0.2","@angular/compiler-cli":"~7.0.0","@angular/language-service":"~7.0.0","@types/node":"~8.9.4","@types/jasmine":"~2.8.8","@types/jasminewd2":"~2.0.3","codelyzer":"~4.5.0","jasmine-core":"~2.99.1","jasmine-spec-reporter":"~4.2.1","karma":"~3.0.0","karma-chrome-launcher":"~2.2.0","karma-coverage-istanbul-reporter":"~2.0.1","karma-jasmine":"~1.1.2","karma-jasmine-html-reporter":"^0.2.2","protractor":"~5.4.0","ts-node":"~7.0.0","tslint":"~5.11.0","typescript":"~3.1.1"}};
 
 /***/ }),
 
@@ -6520,16 +6520,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
 /* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/index.js");
 /* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
-/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
-/* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./services/data.service */ "./src/app/services/data.service.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _components_order_detail_order_detail_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/order-detail/order-detail.component */ "./src/app/components/order-detail/order-detail.component.ts");
-/* harmony import */ var _components_menu_list_menu_list_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/menu-list/menu-list.component */ "./src/app/components/menu-list/menu-list.component.ts");
-/* harmony import */ var _components_orders_list_orders_list_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/orders-list/orders-list.component */ "./src/app/components/orders-list/orders-list.component.ts");
-/* harmony import */ var _components_menuItem_create_menuItem_create_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/menuItem-create/menuItem-create.component */ "./src/app/components/menuItem-create/menuItem-create.component.ts");
-/* harmony import */ var _components_order_create_order_create_components__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/order-create/order-create.components */ "./src/app/components/order-create/order-create.components.ts");
-/* harmony import */ var _components_print_form_print_form_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/print-form/print-form.component */ "./src/app/components/print-form/print-form.component.ts");
+/* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./services/data.service */ "./src/app/services/data.service.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _components_order_detail_order_detail_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/order-detail/order-detail.component */ "./src/app/components/order-detail/order-detail.component.ts");
+/* harmony import */ var _components_menu_list_menu_list_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/menu-list/menu-list.component */ "./src/app/components/menu-list/menu-list.component.ts");
+/* harmony import */ var _components_orders_list_orders_list_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/orders-list/orders-list.component */ "./src/app/components/orders-list/orders-list.component.ts");
+/* harmony import */ var _components_menuItem_create_menuItem_create_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/menuItem-create/menuItem-create.component */ "./src/app/components/menuItem-create/menuItem-create.component.ts");
+/* harmony import */ var _components_order_create_order_create_components__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/order-create/order-create.components */ "./src/app/components/order-create/order-create.components.ts");
+/* harmony import */ var _components_print_form_print_form_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/print-form/print-form.component */ "./src/app/components/print-form/print-form.component.ts");
+/* harmony import */ var _components_snack_bar_snack_bar_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/snack-bar/snack-bar.component */ "./src/app/components/snack-bar/snack-bar.component.ts");
 
 
 
@@ -6557,33 +6557,33 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_14__["AppComponent"],
-                _components_order_detail_order_detail_component__WEBPACK_IMPORTED_MODULE_15__["OrderDetailComponent"], _components_order_detail_order_detail_component__WEBPACK_IMPORTED_MODULE_15__["DialogOverviewExampleDialog"],
-                _components_menu_list_menu_list_component__WEBPACK_IMPORTED_MODULE_16__["MenuListComponent"], _components_orders_list_orders_list_component__WEBPACK_IMPORTED_MODULE_17__["OrderListComponent"], _components_menuItem_create_menuItem_create_component__WEBPACK_IMPORTED_MODULE_18__["MenuItemCreateComponent"],
-                _components_order_create_order_create_components__WEBPACK_IMPORTED_MODULE_19__["OrderCreateComponent"],
-                _components_print_form_print_form_component__WEBPACK_IMPORTED_MODULE_20__["PrintFormComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_13__["AppComponent"],
+                _components_order_detail_order_detail_component__WEBPACK_IMPORTED_MODULE_14__["OrderDetailComponent"], _components_order_detail_order_detail_component__WEBPACK_IMPORTED_MODULE_14__["DialogOverviewExampleDialog"],
+                _components_menu_list_menu_list_component__WEBPACK_IMPORTED_MODULE_15__["MenuListComponent"], _components_orders_list_orders_list_component__WEBPACK_IMPORTED_MODULE_16__["OrderListComponent"], _components_menuItem_create_menuItem_create_component__WEBPACK_IMPORTED_MODULE_17__["MenuItemCreateComponent"],
+                _components_order_create_order_create_components__WEBPACK_IMPORTED_MODULE_18__["OrderCreateComponent"],
+                _components_print_form_print_form_component__WEBPACK_IMPORTED_MODULE_19__["PrintFormComponent"],
+                _components_snack_bar_snack_bar_component__WEBPACK_IMPORTED_MODULE_20__["SnackBarComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _angular_fire__WEBPACK_IMPORTED_MODULE_9__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_8__["environment"].firebaseConfig),
                 _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_10__["AngularFirestoreModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_13__["AppRoutingModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_12__["AppRoutingModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSnackBarModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatFormFieldModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatTableModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialogModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatInputModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatOptionModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSelectModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatCheckboxModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatListModule"],
-                ngx_toastr__WEBPACK_IMPORTED_MODULE_11__["ToastrModule"].forRoot(),
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"]
             ],
-            providers: [_services_data_service__WEBPACK_IMPORTED_MODULE_12__["DataService"],
+            providers: [_services_data_service__WEBPACK_IMPORTED_MODULE_11__["DataService"],
                 { provide: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialogRef"], useValue: { close: function (dialogResult) { } } },
                 { provide: _angular_material__WEBPACK_IMPORTED_MODULE_6__["MAT_DIALOG_DATA"], useValue: [] }
             ],
-            exports: [_app_routing_module__WEBPACK_IMPORTED_MODULE_13__["AppRoutingModule"]],
-            entryComponents: [_components_order_detail_order_detail_component__WEBPACK_IMPORTED_MODULE_15__["DialogOverviewExampleDialog"]],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_14__["AppComponent"]]
+            exports: [_app_routing_module__WEBPACK_IMPORTED_MODULE_12__["AppRoutingModule"]],
+            entryComponents: [_components_order_detail_order_detail_component__WEBPACK_IMPORTED_MODULE_14__["DialogOverviewExampleDialog"]],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_13__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -6630,7 +6630,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/data.service */ "./src/app/services/data.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
-/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/esm5/snack-bar.es5.js");
 
 
 
@@ -6638,11 +6638,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var MenuListComponent = /** @class */ (function () {
-    function MenuListComponent(dataService, router, firestore, toastr) {
+    function MenuListComponent(dataService, router, firestore, _snackBar) {
         this.dataService = dataService;
         this.router = router;
         this.firestore = firestore;
-        this.toastr = toastr;
+        this._snackBar = _snackBar;
         this.menulist = [];
         this.displayedColumns = ['name', 'price', 'qty', 'discount', 'Del'];
     }
@@ -6661,8 +6661,11 @@ var MenuListComponent = /** @class */ (function () {
     MenuListComponent.prototype.onDelete = function (id) {
         if (confirm("вы уверенны что хотите удалить запись?")) {
             this.firestore.doc('menulist/' + id).delete();
-            this.toastr.warning('Запись удалена', 'EMP. Register');
+            this.openSnackBar();
         }
+    };
+    MenuListComponent.prototype.openSnackBar = function () {
+        this._snackBar.open('Сохраниение зказа...', 'завершено!', { duration: 1000, verticalPosition: 'top' });
     };
     MenuListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -6672,7 +6675,7 @@ var MenuListComponent = /** @class */ (function () {
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
             _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_4__["AngularFirestore"],
-            ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"]])
+            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"]])
     ], MenuListComponent);
     return MenuListComponent;
 }());
@@ -6717,17 +6720,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/data.service */ "./src/app/services/data.service.ts");
 /* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
-/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/esm5/snack-bar.es5.js");
 
 
 
 
 
 var MenuItemCreateComponent = /** @class */ (function () {
-    function MenuItemCreateComponent(dataService, firestore, toastr) {
+    function MenuItemCreateComponent(dataService, firestore, _snackBar) {
         this.dataService = dataService;
         this.firestore = firestore;
-        this.toastr = toastr;
+        this._snackBar = _snackBar;
         this.price = 10;
         this.qty = 1;
         this.discount = 0;
@@ -6756,7 +6759,10 @@ var MenuItemCreateComponent = /** @class */ (function () {
         else
             this.firestore.doc('menulist/' + form.value.id).update(data);
         this.resetForm(form);
-        this.toastr.success('Элемент меню сохранен', 'EMP. Register');
+        this.openSnackBar();
+    };
+    MenuItemCreateComponent.prototype.openSnackBar = function () {
+        this._snackBar.open('Сохранение меню...', 'завершено!', { duration: 1000, verticalPosition: 'top' });
     };
     MenuItemCreateComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -6766,7 +6772,7 @@ var MenuItemCreateComponent = /** @class */ (function () {
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"],
             _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__["AngularFirestore"],
-            ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]])
+            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_4__["MatSnackBar"]])
     ], MenuItemCreateComponent);
     return MenuItemCreateComponent;
 }());
@@ -6811,17 +6817,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/data.service */ "./src/app/services/data.service.ts");
 /* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
-/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/esm5/snack-bar.es5.js");
 
 
 
 
 
 var OrderCreateComponent = /** @class */ (function () {
-    function OrderCreateComponent(dataService, firestore, toastr) {
+    function OrderCreateComponent(dataService, firestore, _snackBar) {
         this.dataService = dataService;
         this.firestore = firestore;
-        this.toastr = toastr;
+        this._snackBar = _snackBar;
         this.orderDate = new Date().toLocaleString('ru');
         this.orderNo = '№ 1';
         this.orderSum = 0;
@@ -6868,8 +6874,12 @@ var OrderCreateComponent = /** @class */ (function () {
             //this.orderId = w.id;
             //this.storeOrderItems(w.id);
             //console.log(w.id)
-            _this.toastr.success('Заказ создан', 'EMP. Register');
+            //this.toastr.success('Заказ создан', 'EMP. Register');
+            _this.openSnackBar();
         });
+    };
+    OrderCreateComponent.prototype.openSnackBar = function () {
+        this._snackBar.open('Сохраниение зказа...', 'завершено!', { duration: 1000, verticalPosition: 'top' });
     };
     OrderCreateComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -6879,7 +6889,7 @@ var OrderCreateComponent = /** @class */ (function () {
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"],
             _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__["AngularFirestore"],
-            ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]])
+            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_4__["MatSnackBar"]])
     ], OrderCreateComponent);
     return OrderCreateComponent;
 }());
@@ -6947,9 +6957,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/data.service */ "./src/app/services/data.service.ts");
 /* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
-/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
+/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/esm5/snack-bar.es5.js");
 
 
 
@@ -6958,13 +6968,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var OrderDetailComponent = /** @class */ (function () {
-    function OrderDetailComponent(dataService, route, router, firestore, dialog, toastr) {
+    function OrderDetailComponent(dataService, route, router, firestore, dialog, _snackBar) {
         this.dataService = dataService;
         this.route = route;
         this.router = router;
         this.firestore = firestore;
         this.dialog = dialog;
-        this.toastr = toastr;
+        this._snackBar = _snackBar;
         this.menulist = [];
         this.filteredMenulist = [];
         this.selectedMenu = [];
@@ -7025,7 +7035,7 @@ var OrderDetailComponent = /** @class */ (function () {
                 //isDone: true, this.orderSumToPay = this.orderSumService;
             });
             this.storeOrderItems(this.orderId);
-            this.toastr.success('Заказ обновлен', 'EMP. Register');
+            this.openSnackBar();
             //this.firestore.collection('orders').doc(this.orderId).collection('lines')
         }
         else {
@@ -7108,6 +7118,9 @@ var OrderDetailComponent = /** @class */ (function () {
             i++;
         });
     };
+    OrderDetailComponent.prototype.openSnackBar = function () {
+        this._snackBar.open('Создание зказа...', 'завершено!', { duration: 1000, verticalPosition: 'top' });
+    };
     OrderDetailComponent.prototype.getOrderItems2 = function () {
         var _this = this;
         if (this.orderId) {
@@ -7183,8 +7196,8 @@ var OrderDetailComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./order-detail.component.html */ "./src/app/components/order-detail/order-detail.component.html"),
             styles: [__webpack_require__(/*! ./order-detail.component.css */ "./src/app/components/order-detail/order-detail.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"],
-            _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__["AngularFirestore"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__["MatDialog"], ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"],
+            _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__["AngularFirestore"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialog"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"]])
     ], OrderDetailComponent);
     return OrderDetailComponent;
 }());
@@ -7203,8 +7216,8 @@ var DialogOverviewExampleDialog = /** @class */ (function () {
             template: __webpack_require__(/*! ./edit-dialog.html */ "./src/app/components/order-detail/edit-dialog.html"),
             styles: [__webpack_require__(/*! ./edit-dialog.css */ "./src/app/components/order-detail/edit-dialog.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__["MAT_DIALOG_DATA"])),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__["MatDialogRef"], Object])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialogRef"], Object])
     ], DialogOverviewExampleDialog);
     return DialogOverviewExampleDialog;
 }());
@@ -7250,19 +7263,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/data.service */ "./src/app/services/data.service.ts");
 /* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
-/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
-
 
 
 
 
 
 var OrderListComponent = /** @class */ (function () {
-    function OrderListComponent(dataService, router, firestore, toastr) {
+    function OrderListComponent(dataService, router, firestore) {
         this.dataService = dataService;
         this.router = router;
         this.firestore = firestore;
-        this.toastr = toastr;
         this.orders = [];
         this.displayedColumns = [];
         this.columnsToDisplay = [];
@@ -7456,8 +7466,7 @@ var OrderListComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./orders-list.component.html */ "./src/app/components/orders-list/orders-list.component.html"),
             styles: [__webpack_require__(/*! ./orders-list.component.css */ "./src/app/components/orders-list/orders-list.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_data_service__WEBPACK_IMPORTED_MODULE_3__["DataService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_4__["AngularFirestore"],
-            ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_data_service__WEBPACK_IMPORTED_MODULE_3__["DataService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_4__["AngularFirestore"]])
     ], OrderListComponent);
     return OrderListComponent;
 }());
@@ -7484,7 +7493,7 @@ module.exports = "div {\r\n    font-family: Calibri Light; \r\n    font-size: 14
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"print\">\r\n  <hr width=\"100%\" style=\"border-bottom: 2px dashed #C0C0C0\" color=\"#FFFFFF\" size=\"6\">\r\n  <div style=\"text-align: center;\">\r\n      <pre>Almondo</pre>\r\n      <pre>Restaurant&Club</pre>\r\n  </div>\r\n  \r\n  <div>\r\n    <p>Зал: {{ place }}</p> \r\n    <p><b>Стол: {{ orderNo }}</b></p>\r\n    <div style=\"display: flex; justify-content: space-between;\">\r\n      <div>Открыт: {{ orderDate }}</div> <div>Гостей: {{ orderGuests }}</div>\r\n    </div>\r\n    \r\n    <p>Офиц: {{ waiter }}</p>\r\n    <p>Напечатал: {{ printed }}</p>\r\n    <p>Печать: {{ printTime }}</p>\r\n  </div>\r\n\r\n  <table style=\"line-height: 1.1; border-collapse: collapse;\">\r\n    <thead style=\"text-align: left;\">\r\n      <!--<tr>\r\n        <th>Перечень заказа</th>\r\n      </tr>-->\r\n      <th style=\"width: 150px; border-bottom: 1px solid black;\">Наименование</th>\r\n      <th style=\"width: 40px; border-bottom: 1px solid black;\">К-во</th>\r\n      <th style=\"width: 50px; text-align: right; border-bottom: 1px solid black;\">Сумма</th>\r\n    </thead>\r\n    <tbody>\r\n      <tr *ngFor=\"let emp of selectedMenu\">\r\n        <td >{{emp.name}}</td>\r\n        <td style=\"text-align: center\">{{emp.qty}}</td>\r\n        <td style=\"text-align: right;\">{{(emp.price * emp.qty).toFixed(2)}}</td>\r\n      </tr>\r\n      <tr>\r\n        <td style=\"line-height: 0.2; width: 150px; text-align: right; border-top: 1px solid black;\"></td>\r\n        <td style=\"line-height: 0.2; width: 40px; text-align: right; border-top: 1px solid black;\"></td>\r\n        <td style=\"line-height: 0.2; width: 50px; text-align: right; border-top: 1px solid black;\"></td>\r\n      </tr>\r\n    </tbody>\r\n  </table>\r\n\r\n  <table style=\"line-height: 1.1; border-collapse: collapse;\">\r\n    <thead style=\"text-align: left; font-size: 18px;\">\r\n      <th style=\"width: 200px; border-top: 1px solid black; text-align: center;\"><b>К оплате:</b></th>\r\n      <th style=\"width: 40px; border-top: 1px solid black; text-align: right;\"><b>{{ orderSum }}</b></th>\r\n    </thead>\r\n  </table>\r\n\r\n  <div style=\"text-align: center;\">\r\n    <p><b>{{footerStr}}</b></p>\r\n    <p><b>{{footerStr1}}</b></p>\r\n    <p><b>{{footerStr2}}</b></p>\r\n  </div>\r\n  <hr width=\"100%\" style=\"border-bottom: 2px dashed #C0C0C0\" color=\"#FFFFFF\" size=\"6\">\r\n</div>\r\n\r\n<!--<p>{{orderDate}}</p>\r\n<p>{{orderNo}}</p>\r\n<p>{{orderSum}}</p>\r\n<mat-list>\r\n  <mat-list-item *ngFor=\"let item of selectedMenu\">{{ item.name }} {{item.price * item.qty}}</mat-list-item>\r\n</mat-list>\r\n<button (click)=\"print()\">print</button>\r\n-->\r\n"
+module.exports = "<div class=\"print\">\r\n  <hr width=\"100%\" style=\"border-bottom: 2px dashed #C0C0C0\" color=\"#FFFFFF\" size=\"6\">\r\n  <div style=\"text-align: center;\">\r\n      <pre>Almondo</pre>\r\n      <pre>Restaurant&Club</pre>\r\n  </div>\r\n  \r\n  <div>\r\n    <p>Зал: {{ place }}</p> \r\n    <p><b>Стол: {{ orderNo }}</b></p>\r\n    <div style=\"display: flex; justify-content: space-between;\">\r\n      <div>Открыт: {{ orderDate }}</div> <div>Гостей: {{ orderGuests }}</div>\r\n    </div>\r\n    \r\n    <p>Офиц: {{ waiter }}</p>\r\n    <p>Напечатал: {{ printed }}</p>\r\n    <p>Печать: {{ printTime }}</p>\r\n  </div>\r\n\r\n  <table style=\"line-height: 1.1; border-collapse: collapse; width: 100%;\">\r\n    <thead style=\"text-align: left;\">\r\n      <!--<tr>\r\n        <th>Перечень заказа</th>\r\n      </tr>-->\r\n      <th style=\"border-bottom: 1px solid black;\">Наименование</th>\r\n      <th style=\"text-align: center; border-bottom: 1px solid black;\">К-во</th>\r\n      <th style=\"text-align: right; border-bottom: 1px solid black;\">Сумма</th>\r\n    </thead>\r\n    <tbody>\r\n      <tr *ngFor=\"let emp of selectedMenu\">\r\n        <td >{{emp.name}}</td>\r\n        <td style=\"text-align: center\">{{emp.qty}}</td>\r\n        <td style=\"text-align: right;\">{{(emp.price * emp.qty).toFixed(2)}}</td>\r\n      </tr>\r\n      <tr>\r\n        <td style=\"line-height: 0.2; text-align: right; border-top: 1px solid black;\"></td>\r\n        <td style=\"line-height: 0.2; text-align: right; border-top: 1px solid black;\"></td>\r\n        <td style=\"line-height: 0.2; text-align: right; border-top: 1px solid black;\"></td>\r\n      </tr>\r\n    </tbody>\r\n  </table>\r\n\r\n  <table style=\"line-height: 1.1; border-collapse: collapse;\">\r\n    <thead style=\"text-align: left; font-size: 18px;\">\r\n      <th style=\"border-top: 1px solid black; text-align: center;\"><b>К оплате:</b></th>\r\n      <th style=\"border-top: 1px solid black; text-align: right;\"><b>{{ orderSum }}</b></th>\r\n    </thead>\r\n  </table>\r\n\r\n  <div style=\"text-align: center;\">\r\n    <p><b>{{footerStr}}</b></p>\r\n    <p><b>{{footerStr1}}</b></p>\r\n    <p><b>{{footerStr2}}</b></p>\r\n  </div>\r\n  <hr width=\"100%\" style=\"border-bottom: 2px dashed #C0C0C0\" color=\"#FFFFFF\" size=\"6\">\r\n</div>\r\n\r\n<!--<p>{{orderDate}}</p>\r\n<p>{{orderNo}}</p>\r\n<p>{{orderSum}}</p>\r\n<mat-list>\r\n  <mat-list-item *ngFor=\"let item of selectedMenu\">{{ item.name }} {{item.price * item.qty}}</mat-list-item>\r\n</mat-list>\r\n<button (click)=\"print()\">print</button>\r\n-->\r\n"
 
 /***/ }),
 
@@ -7549,6 +7558,62 @@ var PrintFormComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _services_data_service__WEBPACK_IMPORTED_MODULE_3__["DataService"]])
     ], PrintFormComponent);
     return PrintFormComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/snack-bar/snack-bar.component.css":
+/*!**************************************************************!*\
+  !*** ./src/app/components/snack-bar/snack-bar.component.css ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvc25hY2stYmFyL3NuYWNrLWJhci5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/components/snack-bar/snack-bar.component.html":
+/*!***************************************************************!*\
+  !*** ./src/app/components/snack-bar/snack-bar.component.html ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<span class=\"example-pizza-party\">\n  Действие завершено! 🍕\n</span>"
+
+/***/ }),
+
+/***/ "./src/app/components/snack-bar/snack-bar.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/components/snack-bar/snack-bar.component.ts ***!
+  \*************************************************************/
+/*! exports provided: SnackBarComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SnackBarComponent", function() { return SnackBarComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var SnackBarComponent = /** @class */ (function () {
+    function SnackBarComponent() {
+    }
+    SnackBarComponent.prototype.ngOnInit = function () {
+    };
+    SnackBarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-snack-bar',
+            template: __webpack_require__(/*! ./snack-bar.component.html */ "./src/app/components/snack-bar/snack-bar.component.html"),
+            styles: [__webpack_require__(/*! ./snack-bar.component.css */ "./src/app/components/snack-bar/snack-bar.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], SnackBarComponent);
+    return SnackBarComponent;
 }());
 
 
