@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { ToastrService } from 'ngx-toastr';
 import { Order } from '../../models/order';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
     selector: 'order-create',
@@ -26,7 +26,7 @@ export class OrderCreateComponent implements OnInit {
 
     constructor(private dataService: DataService,
     private firestore: AngularFirestore,
-    private toastr: ToastrService) { }
+    private _snackBar: MatSnackBar) { }
 
     ngOnInit(): void {
       let d = new Date();
@@ -58,8 +58,13 @@ export class OrderCreateComponent implements OnInit {
           //this.orderId = w.id;
           //this.storeOrderItems(w.id);
           //console.log(w.id)
-          this.toastr.success('Заказ создан', 'EMP. Register');
+          //this.toastr.success('Заказ создан', 'EMP. Register');
+          this.openSnackBar();
           }
       )
+    }
+
+    openSnackBar() {
+      this._snackBar.open('Сохраниение зказа...', 'завершено!', {duration: 1000, verticalPosition: 'top'})
     }
 }

@@ -3,7 +3,7 @@ import { DataService } from '../../services/data.service';
 import { menuItem } from '../../models/menuItem';
 import { NgForm } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { ToastrService } from 'ngx-toastr';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
     selector: 'menuItem-create',
@@ -20,7 +20,7 @@ export class MenuItemCreateComponent implements OnInit {
 
   constructor(private dataService: DataService,
     private firestore: AngularFirestore,
-    private toastr: ToastrService) { }
+    private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
       //this.dataService.items.subscribe(res => this.list = res)
@@ -49,7 +49,10 @@ export class MenuItemCreateComponent implements OnInit {
       this.firestore.doc('menulist/' + form.value.id).update(data);
 
     this.resetForm(form);
-    this.toastr.success('Элемент меню сохранен', 'EMP. Register');
+    this.openSnackBar();
   }
 
+  openSnackBar() {
+    this._snackBar.open('Сохранение меню...', 'завершено!', {duration: 1000, verticalPosition: 'top'})
+  }
 }

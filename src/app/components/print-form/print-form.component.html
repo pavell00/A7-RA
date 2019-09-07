@@ -17,14 +17,14 @@
     <p>Печать: {{ printTime }}</p>
   </div>
 
-  <table style="line-height: 1.1; border-collapse: collapse;">
+  <table style="line-height: 1.1; border-collapse: collapse; width: 100%;">
     <thead style="text-align: left;">
       <!--<tr>
         <th>Перечень заказа</th>
       </tr>-->
-      <th style="width: 150px; border-bottom: 1px solid black;">Наименование</th>
-      <th style="width: 40px; border-bottom: 1px solid black;">К-во</th>
-      <th style="width: 50px; text-align: right; border-bottom: 1px solid black;">Сумма</th>
+      <th style="border-bottom: 1px solid black;">Наименование</th>
+      <th style="text-align: center; border-bottom: 1px solid black;">К-во</th>
+      <th style="text-align: right; border-bottom: 1px solid black;">Сумма</th>
     </thead>
     <tbody>
       <tr *ngFor="let emp of selectedMenu">
@@ -33,17 +33,17 @@
         <td style="text-align: right;">{{(emp.price * emp.qty).toFixed(2)}}</td>
       </tr>
       <tr>
-        <td style="line-height: 0.2; width: 150px; text-align: right; border-top: 1px solid black;"></td>
-        <td style="line-height: 0.2; width: 40px; text-align: right; border-top: 1px solid black;"></td>
-        <td style="line-height: 0.2; width: 50px; text-align: right; border-top: 1px solid black;"></td>
+        <td style="line-height: 0.2; text-align: right; border-top: 1px solid black;"></td>
+        <td style="line-height: 0.2; text-align: right; border-top: 1px solid black;"></td>
+        <td style="line-height: 0.2; text-align: right; border-top: 1px solid black;"></td>
       </tr>
     </tbody>
   </table>
 
   <table style="line-height: 1.1; border-collapse: collapse;">
     <thead style="text-align: left; font-size: 18px;">
-      <th style="width: 200px; border-top: 1px solid black; text-align: center;"><b>К оплате:</b></th>
-      <th style="width: 40px; border-top: 1px solid black; text-align: right;"><b>{{ orderSum }}</b></th>
+      <th style="border-top: 1px solid black; text-align: center;"><b>К оплате:</b></th>
+      <th style="border-top: 1px solid black; text-align: right;"><b>{{ orderSum }}</b></th>
     </thead>
   </table>
 

@@ -4,11 +4,11 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'; 
 import { FormsModule } from '@angular/forms';
 
-import { MatTableModule, MatExpansionModule, MatFormFieldModule,
+import { MatTableModule, MatFormFieldModule, 
   MatInputModule, MatButtonModule, MatCheckboxModule, MatOptionModule, MatSelectModule, 
-  MatListModule, MatIconModule, MatToolbar, MatToolbarModule, MatSnackBarModule,
+  MatListModule, MatIconModule, MatSnackBarModule,
   MAT_DIALOG_DATA } from '@angular/material';
-import {MatDialogModule, MatDialogRef, MatDialog} from '@angular/material/dialog';
+import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 
 import { environment } from '../environments/environment';
 import { AngularFireModule } from "@angular/fire";
@@ -24,6 +24,7 @@ import { OrderListComponent } from './components/orders-list/orders-list.compone
 import { MenuItemCreateComponent } from './components/menuItem-create/menuItem-create.component';
 import { OrderCreateComponent } from './components/order-create/order-create.components';
 import { PrintFormComponent } from './components/print-form/print-form.component';
+import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
 
 @NgModule({
   declarations: [ 
@@ -31,7 +32,8 @@ import { PrintFormComponent } from './components/print-form/print-form.component
     OrderDetailComponent, DialogOverviewExampleDialog,
     MenuListComponent, OrderListComponent, MenuItemCreateComponent,
     OrderCreateComponent,
-    PrintFormComponent
+    PrintFormComponent,
+    SnackBarComponent
     ],
   imports:      [ 
     BrowserModule,
@@ -40,7 +42,7 @@ import { PrintFormComponent } from './components/print-form/print-form.component
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
-    MatIconModule, MatButtonModule,
+    MatIconModule, MatButtonModule, MatSnackBarModule,
     MatFormFieldModule, MatTableModule, MatDialogModule,
     MatInputModule, MatOptionModule, MatSelectModule, MatCheckboxModule,
     MatListModule,

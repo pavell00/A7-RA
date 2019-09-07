@@ -6351,6 +6351,17 @@ Zone.__load_patch('PromiseRejectionEvent', function (global, Zone) {
 
 /***/ }),
 
+/***/ "./package.json":
+/*!**********************!*\
+  !*** ./package.json ***!
+  \**********************/
+/*! exports provided: name, version, private, dependencies, scripts, devDependencies, default */
+/***/ (function(module) {
+
+module.exports = {"name":"angular","version":"0.1.5","private":true,"dependencies":{"@angular/animations":"8.2.0","@angular/cdk":"7.3.7","@angular/common":"8.2.0","@angular/compiler":"8.2.0","@angular/core":"8.2.0","@angular/fire":"5.2.1","@angular/forms":"8.2.0","@angular/material":"7.3.7","@angular/platform-browser":"8.2.0","@angular/platform-browser-dynamic":"8.2.0","@angular/router":"8.2.0","core-js":"2.6.9","firebase":"6.3.4","hammerjs":"2.0.8","material-design-icons":"^3.0.1","ngx-toastr":"9.2.0","rxjs":"6.5.2","zone.js":"0.9.1"},"scripts":{"ng":"ng","start":"ng serve -o","build":"ng build","test":"ng test","lint":"ng lint","e2e":"ng e2e"},"devDependencies":{"@angular-devkit/build-angular":"~0.10.0","@angular/cli":"~7.0.2","@angular/compiler-cli":"~7.0.0","@angular/language-service":"~7.0.0","@types/node":"~8.9.4","@types/jasmine":"~2.8.8","@types/jasminewd2":"~2.0.3","codelyzer":"~4.5.0","jasmine-core":"~2.99.1","jasmine-spec-reporter":"~4.2.1","karma":"~3.0.0","karma-chrome-launcher":"~2.2.0","karma-coverage-istanbul-reporter":"~2.0.1","karma-jasmine":"~1.1.2","karma-jasmine-html-reporter":"^0.2.2","protractor":"~5.4.0","ts-node":"~7.0.0","tslint":"~5.11.0","typescript":"~3.1.1"}};
+
+/***/ }),
+
 /***/ "./src/$$_lazy_route_resource lazy recursive":
 /*!**********************************************************!*\
   !*** ./src/$$_lazy_route_resource lazy namespace object ***!
@@ -6445,7 +6456,7 @@ module.exports = ".example-container {\r\n    display: flex;\r\n    flex-directi
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"text-align:center\">\r\n  <h3>\r\n    Welcome to {{ title }}!\r\n  </h3>\r\n  <div>\r\n      <button mat-mini-fab color=\"primary\" [routerLink]=\"['/order-list']\">\r\n        <i class=\"material-icons\">list</i>\r\n      </button>\r\n      <button mat-mini-fab color=\"warn\" [routerLink]=\"['/order-create']\">\r\n        <i class=\"material-icons\">playlist_add</i>\r\n      </button>\r\n      <button mat-mini-fab color=\"primary\" [routerLink]=\"['/menu-list']\">\r\n        <i class=\"material-icons\">format_list_bulleted</i>\r\n      </button>\r\n      <button mat-mini-fab color=\"primary\" (click)=\"print()\">\r\n        <i class=\"material-icons\">print</i>\r\n      </button>\r\n  </div>\r\n</div>\r\n\r\n<router-outlet></router-outlet>\r\n"
+module.exports = "<div style=\"text-align:center\">\r\n  <h4>\r\n    Welcome to {{ title }}! ver. {{version}}\r\n  </h4>\r\n  <div>\r\n      <button mat-mini-fab color=\"primary\" [routerLink]=\"['/order-list']\">\r\n        <i class=\"material-icons\">list</i>\r\n      </button>\r\n      <button mat-mini-fab color=\"warn\" [routerLink]=\"['/order-create']\">\r\n        <i class=\"material-icons\">playlist_add</i>\r\n      </button>\r\n      <button mat-mini-fab color=\"primary\" [routerLink]=\"['/menu-list']\">\r\n        <i class=\"material-icons\">format_list_bulleted</i>\r\n      </button>\r\n      <button mat-mini-fab color=\"primary\" (click)=\"print()\">\r\n        <i class=\"material-icons\">print</i>\r\n      </button>\r\n  </div>\r\n</div>\r\n\r\n<router-outlet></router-outlet>\r\n"
 
 /***/ }),
 
@@ -6461,11 +6472,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _package_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../package.json */ "./package.json");
+var _package_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../package.json */ "./package.json", 1);
+
 
 
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.title = 'A7RA';
+        this.version = _package_json__WEBPACK_IMPORTED_MODULE_2__["version"];
     }
     AppComponent.prototype.print = function () {
         window.print();
@@ -6502,7 +6517,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./environments/environment */ "./src/app/environments/environment.ts");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
 /* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/index.js");
 /* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
 /* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
@@ -6778,7 +6793,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-form-field>\r\n    <input matInput [(ngModel)]=\"orderNo\" placeholder=\"Номер стола\">\r\n</mat-form-field>\r\n<mat-form-field>\r\n    <input matInput [(ngModel)]=\"orderDate\" placeholder=\"Дата / время стола\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: right;\">\r\n    <input matInput [(ngModel)]=\"orderDiscount\" placeholder=\"Дисконт\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: right;\">\r\n    <input matInput [(ngModel)]=\"orderGuests\" placeholder=\"Гостей\">\r\n</mat-form-field>\r\n<!--<mat-form-field style=\"text-align: right;\">\r\n    <input matInput [(ngModel)]=\"orderCheck\" placeholder=\"№ чека\">\r\n</mat-form-field>-->\r\n<div>\r\n  <button mat-button (click)=\"onSave()\">Save</button>\r\n</div>"
+module.exports = "<mat-form-field>\r\n    <input matInput [(ngModel)]=\"orderNo\" placeholder=\"Номер стола\">\r\n</mat-form-field>\r\n<mat-form-field>\r\n    <input matInput [(ngModel)]=\"orderDate\" placeholder=\"Дата / время стола\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: right;\">\r\n    <input matInput type=\"number\" [(ngModel)]=\"orderDiscount\" placeholder=\"Дисконт\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: right;\">\r\n    <input matInput type=\"number\" [(ngModel)]=\"orderGuests\" placeholder=\"Гостей\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: right;\">\r\n    <input matInput type=\"number\" [(ngModel)]=\"orderSumService\" placeholder=\"Сумма за обслуживание\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: right;\">\r\n    <input matInput [(ngModel)]=\"place\" placeholder=\"Место\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: right;\">\r\n    <input matInput [(ngModel)]=\"waiter\" placeholder=\"Оффициант\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: right;\">\r\n    <input matInput [(ngModel)]=\"printed\" placeholder=\"Распечатал\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: right;\">\r\n    <input matInput [(ngModel)]=\"orderPrintTime\" placeholder=\"Время печати\">\r\n</mat-form-field>\r\n<div>\r\n    <button mat-mini-fab color=\"warn\" (click)=\"onSave()\">\r\n        <i class=\"material-icons\">save</i>\r\n    </button>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -6813,13 +6828,24 @@ var OrderCreateComponent = /** @class */ (function () {
         this.orderDiscount = 0;
         this.orderIsDone = false;
         this.orderGuests = 1;
-        this.orderPrintTime = '00:00';
+        this.orderPrintTime = new Date().toLocaleString('ru');
         this.orderCheck = 1;
+        this.orderSumService = 0;
+        this.place = 'Зал';
+        this.waiter = 'Кулешов Андрей';
+        this.printed = 'Кулешов Андрей';
     }
     OrderCreateComponent.prototype.ngOnInit = function () {
         var d = new Date();
-        var mm = d.getMonth() + 1;
-        var date = d.getDate() + '.' + mm + '.' + d.getFullYear().toString().substring(2, 4) + ' ' + d.getHours() + ':' + d.getMinutes();
+        var dd = (d.getDay() + 1).toString();
+        var mm = (d.getMonth() + 1).toString();
+        if (mm.length == 1) {
+            mm = '0' + mm;
+        }
+        if (dd.length == 1) {
+            dd = '0' + dd;
+        }
+        var date = dd + '/' + mm + ' ' + d.getHours() + ':' + d.getMinutes();
         this.orderDate = date;
     };
     OrderCreateComponent.prototype.onSave = function () {
@@ -6830,10 +6856,14 @@ var OrderCreateComponent = /** @class */ (function () {
             TableNo: this.orderNo,
             sumOrder: this.orderSum,
             discountOrder: this.orderDiscount,
+            sumService: this.orderSumService,
             isDone: false,
             guests: this.orderGuests,
             check: this.orderCheck,
-            printTime: this.orderPrintTime
+            printTime: this.orderPrintTime,
+            place: this.place,
+            printed: this.printed,
+            waiter: this.waiter
         }).then(function (w) {
             //this.orderId = w.id;
             //this.storeOrderItems(w.id);
@@ -6944,8 +6974,8 @@ var OrderDetailComponent = /** @class */ (function () {
         this.orderSum = 0.0;
         this.orderDiscount = 0.0;
         this.orderDiscountSum = 0.0;
-        this.orderSumToPay = 0.0;
-        this.orderSumService = 0.0;
+        this.orderSumToPay = 1.0;
+        this.orderSumService = 1.0;
         this.orderGuests = 1;
         this.printTime = '';
         this.place = '';
@@ -7201,7 +7231,7 @@ module.exports = "table {\r\n    width: -webkit-fill-available;\r\n}\r\n\r\n.mat
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table mat-table [dataSource]=\"orders\" class=\"mat-elevation-z8\">\r\n  <ng-container matColumnDef=\"TableNo\">\r\n    <th mat-header-cell *matHeaderCellDef>Стол</th>\r\n    <td mat-cell *matCellDef=\"let element\" (click)=\"editOrder(element.id)\"> {{element.TableNo}} </td>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"OrderDate\">\r\n    <th mat-header-cell *matHeaderCellDef>Дата / Время</th>\r\n    <td mat-cell *matCellDef=\"let element\" (click)=\"editOrder(element.id)\"> {{element.OrderDate}} </td>\r\n  </ng-container>\r\n  \r\n  <ng-container matColumnDef=\"sumOrder\">\r\n    <th mat-header-cell *matHeaderCellDef>Сумма</th>\r\n    <td mat-cell *matCellDef=\"let element\" (click)=\"editOrder(element.id)\"> {{element.sumOrder}} </td>\r\n  </ng-container>\r\n  \r\n  <ng-container matColumnDef=\"discountOrder\">\r\n    <th mat-header-cell *matHeaderCellDef> +/- </th>\r\n    <td mat-cell *matCellDef=\"let element\" (click)=\"editOrder(element.id)\"> {{element.discountOrder}} </td>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"Actions\">\r\n      <th mat-header-cell *matHeaderCellDef>Actions</th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n          <button mat-mini-fab color=\"warn\" (click)=\"delteOrder(element.id)\">\r\n              <i class=\"material-icons\">delete</i>\r\n            </button>\r\n      </td>\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" [ngClass]=\"{'order-done': row.isDone, 'order-open': !row.isDone}\"></tr>\r\n</table>"
+module.exports = "<table mat-table [dataSource]=\"orders\" class=\"mat-elevation-z8\">\r\n  <ng-container matColumnDef=\"TableNo\">\r\n    <th mat-header-cell *matHeaderCellDef>Стол</th>\r\n    <td mat-cell *matCellDef=\"let element\" (click)=\"editOrder(element.id)\"> {{element.TableNo}} </td>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"OrderDate\">\r\n    <th mat-header-cell *matHeaderCellDef>Дата / Время</th>\r\n    <td mat-cell *matCellDef=\"let element\" (click)=\"editOrder(element.id)\"> {{element.OrderDate}} </td>\r\n  </ng-container>\r\n  \r\n  <ng-container matColumnDef=\"sumOrder\">\r\n    <th mat-header-cell *matHeaderCellDef>Сумма</th>\r\n    <td mat-cell *matCellDef=\"let element\" (click)=\"editOrder(element.id)\"> {{element.sumToPay}} </td>\r\n  </ng-container>\r\n  \r\n  <ng-container matColumnDef=\"discountOrder\">\r\n    <th mat-header-cell *matHeaderCellDef> +/- </th>\r\n    <td mat-cell *matCellDef=\"let element\" (click)=\"editOrder(element.id)\"> {{element.discountOrder}} </td>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"Actions\">\r\n      <th mat-header-cell *matHeaderCellDef>Actions</th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n          <button mat-mini-fab color=\"warn\" (click)=\"delteOrder(element.id)\">\r\n            <i class=\"material-icons\">delete</i>\r\n          </button>\r\n      </td>\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" [ngClass]=\"{'order-done': row.isDone, 'order-open': !row.isDone}\"></tr>\r\n</table>"
 
 /***/ }),
 
@@ -7412,6 +7442,7 @@ var OrderListComponent = /** @class */ (function () {
         return txt;
     };
     OrderListComponent.prototype.delteOrder = function (id) {
+        this.dataService.deleteOrder(id);
     };
     OrderListComponent.prototype.getDocName = function (id) {
         console.log(this.firestore.collection('orders').doc(id).ref.id);
@@ -7453,7 +7484,7 @@ module.exports = "div {\r\n    font-family: Calibri Light; \r\n    font-size: 14
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"print\">\r\n    <div style=\"text-align: center;\">\r\n        <pre>Almondo</pre>\r\n        <pre>Restaurant&Club</pre>\r\n    </div>\r\n    \r\n    <div>\r\n      <p>Зал: {{ place }}</p> \r\n      <p><b>Стол: {{ orderNo }}</b></p>\r\n      <div style=\"display: flex; justify-content: space-between;\">\r\n        <div>Открыт: {{ orderDate }}</div> <div>Гостей: {{ orderGuests }}</div>\r\n      </div>\r\n      \r\n      <p>Офиц: {{ waiter }}</p>\r\n      <p>Напечатал: {{ printed }}</p>\r\n      <p>Печать: {{ printTime }}</p>\r\n    </div>\r\n\r\n    <table style=\"line-height: 1.1; border-collapse: collapse;\">\r\n      <thead style=\"text-align: left;\">\r\n        <!--<tr>\r\n          <th>Перечень заказа</th>\r\n        </tr>-->\r\n        <th style=\"width: 150px; border-bottom: 1px solid black;\">Наименование</th>\r\n        <th style=\"width: 40px; border-bottom: 1px solid black;\">К-во</th>\r\n        <th style=\"width: 50px; text-align: right; border-bottom: 1px solid black;\">Сумма</th>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor=\"let emp of selectedMenu\">\r\n          <td >{{emp.name}}</td>\r\n          <td style=\"text-align: center\">{{emp.qty}}</td>\r\n          <td style=\"text-align: right;\">{{emp.price * emp.qty}}</td>\r\n        </tr>\r\n        <tr>\r\n          <td style=\"line-height: 0.2; width: 150px; text-align: right; border-top: 1px solid black;\"></td>\r\n          <td style=\"line-height: 0.2; width: 40px; text-align: right; border-top: 1px solid black;\"></td>\r\n          <td style=\"line-height: 0.2; width: 50px; text-align: right; border-top: 1px solid black;\"></td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n\r\n    <table style=\"line-height: 1.1; border-collapse: collapse;\">\r\n      <thead style=\"text-align: left; font-size: 18px;\">\r\n        <th style=\"width: 200px; border-top: 1px solid black; text-align: center;\"><b>К оплате:</b></th>\r\n        <th style=\"width: 40px; border-top: 1px solid black; text-align: right;\"><b>{{ orderSum }}</b></th>\r\n      </thead>\r\n    </table>\r\n\r\n</div>\r\n\r\n<!--<p>{{orderDate}}</p>\r\n<p>{{orderNo}}</p>\r\n<p>{{orderSum}}</p>\r\n<mat-list>\r\n  <mat-list-item *ngFor=\"let item of selectedMenu\">{{ item.name }} {{item.price * item.qty}}</mat-list-item>\r\n</mat-list>\r\n<button (click)=\"print()\">print</button>\r\n-->\r\n"
+module.exports = "<div class=\"print\">\r\n  <hr width=\"100%\" style=\"border-bottom: 2px dashed #C0C0C0\" color=\"#FFFFFF\" size=\"6\">\r\n  <div style=\"text-align: center;\">\r\n      <pre>Almondo</pre>\r\n      <pre>Restaurant&Club</pre>\r\n  </div>\r\n  \r\n  <div>\r\n    <p>Зал: {{ place }}</p> \r\n    <p><b>Стол: {{ orderNo }}</b></p>\r\n    <div style=\"display: flex; justify-content: space-between;\">\r\n      <div>Открыт: {{ orderDate }}</div> <div>Гостей: {{ orderGuests }}</div>\r\n    </div>\r\n    \r\n    <p>Офиц: {{ waiter }}</p>\r\n    <p>Напечатал: {{ printed }}</p>\r\n    <p>Печать: {{ printTime }}</p>\r\n  </div>\r\n\r\n  <table style=\"line-height: 1.1; border-collapse: collapse;\">\r\n    <thead style=\"text-align: left;\">\r\n      <!--<tr>\r\n        <th>Перечень заказа</th>\r\n      </tr>-->\r\n      <th style=\"width: 150px; border-bottom: 1px solid black;\">Наименование</th>\r\n      <th style=\"width: 40px; border-bottom: 1px solid black;\">К-во</th>\r\n      <th style=\"width: 50px; text-align: right; border-bottom: 1px solid black;\">Сумма</th>\r\n    </thead>\r\n    <tbody>\r\n      <tr *ngFor=\"let emp of selectedMenu\">\r\n        <td >{{emp.name}}</td>\r\n        <td style=\"text-align: center\">{{emp.qty}}</td>\r\n        <td style=\"text-align: right;\">{{(emp.price * emp.qty).toFixed(2)}}</td>\r\n      </tr>\r\n      <tr>\r\n        <td style=\"line-height: 0.2; width: 150px; text-align: right; border-top: 1px solid black;\"></td>\r\n        <td style=\"line-height: 0.2; width: 40px; text-align: right; border-top: 1px solid black;\"></td>\r\n        <td style=\"line-height: 0.2; width: 50px; text-align: right; border-top: 1px solid black;\"></td>\r\n      </tr>\r\n    </tbody>\r\n  </table>\r\n\r\n  <table style=\"line-height: 1.1; border-collapse: collapse;\">\r\n    <thead style=\"text-align: left; font-size: 18px;\">\r\n      <th style=\"width: 200px; border-top: 1px solid black; text-align: center;\"><b>К оплате:</b></th>\r\n      <th style=\"width: 40px; border-top: 1px solid black; text-align: right;\"><b>{{ orderSum }}</b></th>\r\n    </thead>\r\n  </table>\r\n\r\n  <div style=\"text-align: center;\">\r\n    <p><b>{{footerStr}}</b></p>\r\n    <p><b>{{footerStr1}}</b></p>\r\n    <p><b>{{footerStr2}}</b></p>\r\n  </div>\r\n  <hr width=\"100%\" style=\"border-bottom: 2px dashed #C0C0C0\" color=\"#FFFFFF\" size=\"6\">\r\n</div>\r\n\r\n<!--<p>{{orderDate}}</p>\r\n<p>{{orderNo}}</p>\r\n<p>{{orderSum}}</p>\r\n<mat-list>\r\n  <mat-list-item *ngFor=\"let item of selectedMenu\">{{ item.name }} {{item.price * item.qty}}</mat-list-item>\r\n</mat-list>\r\n<button (click)=\"print()\">print</button>\r\n-->\r\n"
 
 /***/ }),
 
@@ -7482,6 +7513,9 @@ var PrintFormComponent = /** @class */ (function () {
         this.selectedMenu = [];
         this.waiter = '';
         this.printTime = '';
+        this.footerStr = '';
+        this.footerStr1 = '';
+        this.footerStr2 = '';
     }
     ;
     PrintFormComponent.prototype.ngOnInit = function () {
@@ -7497,14 +7531,13 @@ var PrintFormComponent = /** @class */ (function () {
             _this.waiter = params['waiter'];
             _this.printTime = params['printTime'];
         });
-        /*this.dataService.getParams().get().toPromise().then(
-          param => {//console.log("params data:", doc.data())
-            this.tableheader = param.data().tableHeader1;
-          })*/
+        this.dataService.getParams().get().toPromise().then(function (param) {
+            _this.footerStr = param.data().footerStr;
+            _this.footerStr1 = param.data().footerStr1;
+            _this.footerStr2 = param.data().footerStr2;
+        });
     };
     PrintFormComponent.prototype.print = function () {
-        //console.log(JSON.stringify(this.selectedMenu))
-        //console.log(JSON.stringify(this.sub))
         window.print();
     };
     PrintFormComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -7518,31 +7551,6 @@ var PrintFormComponent = /** @class */ (function () {
     return PrintFormComponent;
 }());
 
-
-
-/***/ }),
-
-/***/ "./src/app/environments/environment.ts":
-/*!*********************************************!*\
-  !*** ./src/app/environments/environment.ts ***!
-  \*********************************************/
-/*! exports provided: environment */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
-var environment = {
-    production: false,
-    firebaseConfig: {
-        apiKey: "AIzaSyCHiHtX_G1Wrtt4XXnw-1m-8DFY__dWZ8c",
-        authDomain: "myfirstfbapp-4fa9f.firebaseapp.com",
-        databaseURL: "https://myfirstfbapp-4fa9f.firebaseio.com",
-        projectId: "myfirstfbapp-4fa9f",
-        storageBucket: "myfirstfbapp-4fa9f.appspot.com",
-        messagingSenderId: "112283854721"
-    }
-};
 
 
 /***/ }),
@@ -7583,6 +7591,8 @@ var DataService = /** @class */ (function () {
         //return this.firestore.collection('orders').doc(id).snapshotChanges();
         return this.firestore.collection('orders').doc(id);
     };
+    DataService.prototype.deleteOrder = function (id) {
+    };
     DataService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
@@ -7592,6 +7602,31 @@ var DataService = /** @class */ (function () {
     return DataService;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/environments/environment.ts":
+/*!*****************************************!*\
+  !*** ./src/environments/environment.ts ***!
+  \*****************************************/
+/*! exports provided: environment */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
+var environment = {
+    production: false,
+    firebaseConfig: {
+        apiKey: "AIzaSyCHiHtX_G1Wrtt4XXnw-1m-8DFY__dWZ8c",
+        authDomain: "myfirstfbapp-4fa9f.firebaseapp.com",
+        databaseURL: "https://myfirstfbapp-4fa9f.firebaseio.com",
+        projectId: "myfirstfbapp-4fa9f",
+        storageBucket: "myfirstfbapp-4fa9f.appspot.com",
+        messagingSenderId: "112283854721"
+    }
+};
 
 
 /***/ }),

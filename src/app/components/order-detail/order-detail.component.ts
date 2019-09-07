@@ -3,11 +3,10 @@ import { Order } from '../../models/order';
 import { menuItem } from '../../models/menuItem';
 import { DataService } from '../../services/data.service';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute, Router, NavigationExtras }     from '@angular/router';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Subscription, Observable, Subject } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 export interface DialogData {
   id: string;
@@ -46,8 +45,7 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
   waiter: string = '';
 
   constructor(private dataService: DataService, private route: ActivatedRoute, private router: Router,
-    private firestore: AngularFirestore, public dialog: MatDialog, private toastr: ToastrService) {
-
+    private firestore: AngularFirestore, public dialog: MatDialog, private _snackBar: MatSnackBar) {
   }
   
   ngOnInit() {
@@ -106,7 +104,7 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
         //isDone: true, this.orderSumToPay = this.orderSumService;
       });
       this.storeOrderItems(this.orderId);
-      this.toastr.success('Заказ обновлен', 'EMP. Register');
+      this.openSnackBar();
     //this.firestore.collection('orders').doc(this.orderId).collection('lines')
     } else {
       //add new document
@@ -199,6 +197,10 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
       }
     )
 
+  }
+
+  openSnackBar() {
+    this._snackBar.open('Создание зказа...', 'завершено!', {duration: 1000, verticalPosition: 'top'})
   }
 
   getOrderItems2() {
