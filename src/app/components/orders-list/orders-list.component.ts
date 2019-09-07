@@ -209,7 +209,7 @@ export class OrderListComponent implements OnInit {
   }
 
   delteOrder(id: string) {
-
+    this.dataService.deleteOrder(id);
   }
 
   getDocName(id: string) {

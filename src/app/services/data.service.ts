@@ -39,4 +39,7 @@ export class DataService {
     return this.firestore.collection('orders').doc(id);
   }
 
+  deleteOrder(id: string) {
+    
+  }
 }
