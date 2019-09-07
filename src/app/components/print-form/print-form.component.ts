@@ -18,6 +18,9 @@ export class PrintFormComponent implements OnInit {
   printed: string;
   waiter: string = '';
   printTime: string = '';
+  footerStr: string = '';
+  footerStr1: string = '';
+  footerStr2: string = '';
   
 
   constructor(private route: ActivatedRoute, private dataService: DataService) { }
@@ -34,10 +37,12 @@ export class PrintFormComponent implements OnInit {
       this.waiter = params['waiter'];
       this.printTime = params['printTime'];
     });
-    /*this.dataService.getParams().get().toPromise().then(
+    this.dataService.getParams().get().toPromise().then(
       param => {//console.log("params data:", doc.data())
-        this.tableheader = param.data().tableHeader1;
-      })*/
+        this.footerStr = param.data().footerStr;
+        this.footerStr1 = param.data().footerStr1;
+        this.footerStr2 = param.data().footerStr2;
+      })
   }
 
   print() {
