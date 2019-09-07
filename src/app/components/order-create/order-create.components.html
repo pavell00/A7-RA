@@ -22,6 +22,9 @@
 <mat-form-field style="text-align: right;">
     <input matInput [(ngModel)]="printed" placeholder="Распечатал">
 </mat-form-field>
+<mat-form-field style="text-align: right;">
+    <input matInput [(ngModel)]="orderPrintTime" placeholder="Время печати">
+</mat-form-field>
 <div>
     <button mat-mini-fab color="warn" (click)="onSave()">
         <i class="material-icons">save</i>

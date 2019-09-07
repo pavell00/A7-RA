@@ -17,7 +17,7 @@ export class OrderCreateComponent implements OnInit {
     orderDiscount: number = 0;
     orderIsDone: boolean = false;
     orderGuests: number = 1;
-    orderPrintTime: string = '00:00';
+    orderPrintTime: string = new Date().toLocaleString('ru');
     orderCheck: number = 1;
     orderSumService: number = 0;
     place: string = 'Зал';
