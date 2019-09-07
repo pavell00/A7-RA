@@ -10,7 +10,7 @@ import { MatTableModule, MatExpansionModule, MatFormFieldModule,
   MAT_DIALOG_DATA } from '@angular/material';
 import {MatDialogModule, MatDialogRef, MatDialog} from '@angular/material/dialog';
 
-import { environment } from './environments/environment';
+import { environment } from '../environments/environment';
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { ToastrModule } from 'ngx-toastr';
