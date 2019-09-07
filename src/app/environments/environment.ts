@@ -7,5 +7,5 @@ export const environment = {
     projectId: "myfirstfbapp-4fa9f",
     storageBucket: "myfirstfbapp-4fa9f.appspot.com",
     messagingSenderId: "112283854721"
-  }  
+  }
 };
