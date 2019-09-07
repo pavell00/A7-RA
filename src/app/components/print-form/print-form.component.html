@@ -29,7 +29,7 @@
         <tr *ngFor="let emp of selectedMenu">
           <td >{{emp.name}}</td>
           <td style="text-align: center">{{emp.qty}}</td>
-          <td style="text-align: right;">{{emp.price * emp.qty}}</td>
+          <td style="text-align: right;">{{(emp.price * emp.qty).toFixed(2)}}</td>
         </tr>
         <tr>
           <td style="line-height: 0.2; width: 150px; text-align: right; border-top: 1px solid black;"></td>

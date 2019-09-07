@@ -41,8 +41,6 @@ export class PrintFormComponent implements OnInit {
   }
 
   print() {
-    //console.log(JSON.stringify(this.selectedMenu))
-    //console.log(JSON.stringify(this.sub))
     window.print();
   }
 

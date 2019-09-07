@@ -26,8 +26,11 @@ export class OrderCreateComponent implements OnInit {
 
     ngOnInit(): void {
       let d = new Date();
-      let mm: number = d.getMonth() + 1;
-      let date: string = d.getDate()+'.'+mm+'.'+d.getFullYear().toString().substring(2, 4)+' '+d.getHours()+':'+d.getMinutes();
+      let dd: string = (d.getDay() + 1).toString();
+      let mm: string = (d.getMonth() + 1).toString();
+      if (mm.length == 1) {mm = '0'+mm;}
+      if (dd.length == 1) {dd = '0'+dd;}
+      let date: string = dd+'/'+mm+' '+d.getHours()+':'+d.getMinutes();
       this.orderDate = date;
     }
 
