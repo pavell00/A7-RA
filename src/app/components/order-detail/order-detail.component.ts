@@ -43,6 +43,7 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
   place: string = '';
   printed: string = '';
   waiter: string = '';
+  buttonState: boolean;
 
   constructor(private dataService: DataService, private route: ActivatedRoute, private router: Router,
     private firestore: AngularFirestore, public dialog: MatDialog, private _snackBar: MatSnackBar) {
@@ -61,7 +62,6 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
     this.route.queryParams.subscribe(params => {
       this.orderId = params["orderid"];
     });
-
   }
 
   print(): void {
@@ -149,6 +149,7 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
   }
 
   printForm() {
+    this.dataService.changeStatePrnButton(true);
     let navigationExtras: NavigationExtras = { queryParams: 
       { selectedMenu: JSON.stringify(this.selectedMenu), 
         orderSum: this.orderSum.toFixed(2),

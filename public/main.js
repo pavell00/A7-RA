@@ -6358,7 +6358,7 @@ Zone.__load_patch('PromiseRejectionEvent', function (global, Zone) {
 /*! exports provided: name, version, private, dependencies, scripts, devDependencies, default */
 /***/ (function(module) {
 
-module.exports = {"name":"angular","version":"0.1.8","private":true,"dependencies":{"@angular/animations":"8.2.0","@angular/cdk":"7.3.7","@angular/common":"8.2.0","@angular/compiler":"8.2.0","@angular/core":"8.2.0","@angular/fire":"5.2.1","@angular/forms":"8.2.0","@angular/material":"7.3.7","@angular/platform-browser":"8.2.0","@angular/platform-browser-dynamic":"8.2.0","@angular/router":"8.2.0","core-js":"2.6.9","firebase":"6.3.4","hammerjs":"2.0.8","material-design-icons":"^3.0.1","rxjs":"6.5.2","zone.js":"0.9.1"},"scripts":{"ng":"ng","start":"ng serve -o","build":"ng build","test":"ng test","lint":"ng lint","e2e":"ng e2e"},"devDependencies":{"@angular-devkit/build-angular":"~0.10.0","@angular/cli":"~7.0.2","@angular/compiler-cli":"~7.0.0","@angular/language-service":"~7.0.0","@types/node":"~8.9.4","@types/jasmine":"~2.8.8","@types/jasminewd2":"~2.0.3","codelyzer":"~4.5.0","jasmine-core":"~2.99.1","jasmine-spec-reporter":"~4.2.1","karma":"~3.0.0","karma-chrome-launcher":"~2.2.0","karma-coverage-istanbul-reporter":"~2.0.1","karma-jasmine":"~1.1.2","karma-jasmine-html-reporter":"^0.2.2","protractor":"~5.4.0","ts-node":"~7.0.0","tslint":"~5.11.0","typescript":"~3.1.1"}};
+module.exports = {"name":"angular","version":"0.1.9","private":true,"dependencies":{"@angular/animations":"8.2.0","@angular/cdk":"7.3.7","@angular/common":"8.2.0","@angular/compiler":"8.2.0","@angular/core":"8.2.0","@angular/fire":"5.2.1","@angular/forms":"8.2.0","@angular/material":"7.3.7","@angular/platform-browser":"8.2.0","@angular/platform-browser-dynamic":"8.2.0","@angular/router":"8.2.0","core-js":"2.6.9","firebase":"6.3.4","hammerjs":"2.0.8","material-design-icons":"^3.0.1","rxjs":"6.5.2","zone.js":"0.9.1"},"scripts":{"ng":"ng","start":"ng serve -o","build":"ng build","test":"ng test","lint":"ng lint","e2e":"ng e2e"},"devDependencies":{"@angular-devkit/build-angular":"~0.10.0","@angular/cli":"~7.0.2","@angular/compiler-cli":"~7.0.0","@angular/language-service":"~7.0.0","@types/node":"~8.9.4","@types/jasmine":"~2.8.8","@types/jasminewd2":"~2.0.3","codelyzer":"~4.5.0","jasmine-core":"~2.99.1","jasmine-spec-reporter":"~4.2.1","karma":"~3.0.0","karma-chrome-launcher":"~2.2.0","karma-coverage-istanbul-reporter":"~2.0.1","karma-jasmine":"~1.1.2","karma-jasmine-html-reporter":"^0.2.2","protractor":"~5.4.0","ts-node":"~7.0.0","tslint":"~5.11.0","typescript":"~3.1.1"}};
 
 /***/ }),
 
@@ -6834,7 +6834,7 @@ var OrderCreateComponent = /** @class */ (function () {
         this.orderDiscount = 0;
         this.orderIsDone = false;
         this.orderGuests = 1;
-        this.orderPrintTime = new Date().toLocaleString('ru');
+        this.orderPrintTime = new Date().toLocaleString('ru').replace(',', '');
         this.orderCheck = 1;
         this.orderSumService = 0;
         this.place = 'Зал';
@@ -7538,7 +7538,7 @@ var PrintFormComponent = /** @class */ (function () {
             _this.place = params['place'];
             _this.printed = params['printed'];
             _this.waiter = params['waiter'];
-            _this.printTime = params['printTime'];
+            _this.printTime = new Date().toLocaleString('ru').replace(',', ''); //params['printTime'];
         });
         this.dataService.getParams().get().toPromise().then(function (param) {
             _this.footerStr = param.data().footerStr;

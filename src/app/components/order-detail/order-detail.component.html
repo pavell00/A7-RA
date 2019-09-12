@@ -3,7 +3,9 @@
     <ul class="heroes">
       <li *ngFor="let emp of selectedMenu" (click)="openDialog(emp)">
         {{emp.name}} {{emp.price}} {{emp.qty}} {{emp.discount}}
-          <button mat-mini-fab (click)="onDelete(emp.id)">X</button>
+          <button mat-mini-fab color="warn" (click)="onDelete(emp.id)">
+            <i class="material-icons">delete</i>
+          </button>
       </li>
     </ul>
     <div style="display: flex; justify-content: space-between;">

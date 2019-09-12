@@ -14,9 +14,14 @@ import { AngularFireDatabase, AngularFireObject } from '@angular/fire/database';
 })
 export class DataService {
 
-  public formData: menuItem;
-  
+  private statePrintButton = new BehaviorSubject<boolean>(false);
+  isShowPRNButton = this.statePrintButton.asObservable();
+  //public formData: menuItem;
   constructor(private firestore: AngularFirestore) { }
+
+  changeStatePrnButton(res: boolean) {
+    this.statePrintButton.next(res);
+  }
 
   getMenuList() {
     return this.firestore.collection('menulist').snapshotChanges();
@@ -40,6 +45,12 @@ export class DataService {
   }
 
   deleteOrder(id: string) {
-    
+    //this.firestore.collection('orders').doc(id).ref.collection('lines').parent.delete();
+    //this.firestore.collection('orders').doc(id).delete();
   }
+
+  showPrinButton() {
+
+  }
+
 }

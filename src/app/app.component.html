@@ -6,13 +6,13 @@
       <button mat-mini-fab color="primary" [routerLink]="['/order-list']">
         <i class="material-icons">list</i>
       </button>
-      <button mat-mini-fab color="warn" [routerLink]="['/order-create']">
+      <button mat-mini-fab color="accent" [routerLink]="['/order-create']">
         <i class="material-icons">playlist_add</i>
       </button>
       <button mat-mini-fab color="primary" [routerLink]="['/menu-list']">
         <i class="material-icons">format_list_bulleted</i>
       </button>
-      <button mat-mini-fab color="primary" (click)="print()">
+      <button mat-mini-fab color="primary" *ngIf="isShowPRN" (click)="print()">
         <i class="material-icons">print</i>
       </button>
   </div>
