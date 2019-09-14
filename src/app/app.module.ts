@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 
 import { MatTableModule, MatFormFieldModule, 
   MatInputModule, MatButtonModule, MatCheckboxModule, MatOptionModule, MatSelectModule, 
-  MatListModule, MatIconModule, MatSnackBarModule,
+  MatListModule, MatIconModule, MatSnackBarModule, MatSlideToggleModule,
   MAT_DIALOG_DATA } from '@angular/material';
 import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 
@@ -41,7 +41,8 @@ import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
-    MatIconModule, MatButtonModule, MatSnackBarModule,
+    MatListModule, MatIconModule, MatSnackBarModule, MatSlideToggleModule,
+    MatIconModule, MatButtonModule, MatSnackBarModule, 
     MatFormFieldModule, MatTableModule, MatDialogModule,
     MatInputModule, MatOptionModule, MatSelectModule, MatCheckboxModule,
     MatListModule,

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Order } from '../../models/order';
-import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
     selector: 'order-create',
@@ -25,8 +24,7 @@ export class OrderCreateComponent implements OnInit {
     printed: string= 'Кулешов Андрей';
 
     constructor(private dataService: DataService,
-    private firestore: AngularFirestore,
-    private _snackBar: MatSnackBar) { }
+    private firestore: AngularFirestore) { }
 
     ngOnInit(): void {
       let d = new Date();
@@ -59,12 +57,9 @@ export class OrderCreateComponent implements OnInit {
           //this.storeOrderItems(w.id);
           //console.log(w.id)
           //this.toastr.success('Заказ создан', 'EMP. Register');
-          this.openSnackBar();
+          this.dataService.openSnackBar('Сохраниение зказа...', 'завершено!');
           }
       )
     }
 
-    openSnackBar() {
-      this._snackBar.open('Сохраниение зказа...', 'завершено!', {duration: 1000, verticalPosition: 'top'})
-    }
 }

@@ -6358,7 +6358,7 @@ Zone.__load_patch('PromiseRejectionEvent', function (global, Zone) {
 /*! exports provided: name, version, private, dependencies, scripts, devDependencies, default */
 /***/ (function(module) {
 
-module.exports = {"name":"angular","version":"0.1.9","private":true,"dependencies":{"@angular/animations":"8.2.0","@angular/cdk":"7.3.7","@angular/common":"8.2.0","@angular/compiler":"8.2.0","@angular/core":"8.2.0","@angular/fire":"5.2.1","@angular/forms":"8.2.0","@angular/material":"7.3.7","@angular/platform-browser":"8.2.0","@angular/platform-browser-dynamic":"8.2.0","@angular/router":"8.2.0","core-js":"2.6.9","firebase":"6.3.4","hammerjs":"2.0.8","material-design-icons":"^3.0.1","rxjs":"6.5.2","zone.js":"0.9.1"},"scripts":{"ng":"ng","start":"ng serve -o","build":"ng build","test":"ng test","lint":"ng lint","e2e":"ng e2e"},"devDependencies":{"@angular-devkit/build-angular":"~0.10.0","@angular/cli":"~7.0.2","@angular/compiler-cli":"~7.0.0","@angular/language-service":"~7.0.0","@types/node":"~8.9.4","@types/jasmine":"~2.8.8","@types/jasminewd2":"~2.0.3","codelyzer":"~4.5.0","jasmine-core":"~2.99.1","jasmine-spec-reporter":"~4.2.1","karma":"~3.0.0","karma-chrome-launcher":"~2.2.0","karma-coverage-istanbul-reporter":"~2.0.1","karma-jasmine":"~1.1.2","karma-jasmine-html-reporter":"^0.2.2","protractor":"~5.4.0","ts-node":"~7.0.0","tslint":"~5.11.0","typescript":"~3.1.1"}};
+module.exports = {"name":"angular","version":"0.2.0","private":true,"dependencies":{"@angular/animations":"8.2.0","@angular/cdk":"7.3.7","@angular/common":"8.2.0","@angular/compiler":"8.2.0","@angular/core":"8.2.0","@angular/fire":"5.2.1","@angular/forms":"8.2.0","@angular/material":"7.3.7","@angular/platform-browser":"8.2.0","@angular/platform-browser-dynamic":"8.2.0","@angular/router":"8.2.0","core-js":"2.6.9","firebase":"6.3.4","hammerjs":"2.0.8","material-design-icons":"^3.0.1","rxjs":"6.5.2","zone.js":"0.9.1"},"scripts":{"ng":"ng","start":"ng serve -o","build":"ng build","test":"ng test","lint":"ng lint","e2e":"ng e2e"},"devDependencies":{"@angular-devkit/build-angular":"~0.10.0","@angular/cli":"~7.0.2","@angular/compiler-cli":"~7.0.0","@angular/language-service":"~7.0.0","@types/node":"~8.9.4","@types/jasmine":"~2.8.8","@types/jasminewd2":"~2.0.3","codelyzer":"~4.5.0","jasmine-core":"~2.99.1","jasmine-spec-reporter":"~4.2.1","karma":"~3.0.0","karma-chrome-launcher":"~2.2.0","karma-coverage-istanbul-reporter":"~2.0.1","karma-jasmine":"~1.1.2","karma-jasmine-html-reporter":"^0.2.2","protractor":"~5.4.0","ts-node":"~7.0.0","tslint":"~5.11.0","typescript":"~3.1.1"}};
 
 /***/ }),
 
@@ -6456,7 +6456,7 @@ module.exports = ".example-container {\r\n    display: flex;\r\n    flex-directi
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"text-align:center\">\r\n  <h4>\r\n    Welcome to {{ title }}! ver. {{version}}\r\n  </h4>\r\n  <div>\r\n      <button mat-mini-fab color=\"primary\" [routerLink]=\"['/order-list']\">\r\n        <i class=\"material-icons\">list</i>\r\n      </button>\r\n      <button mat-mini-fab color=\"warn\" [routerLink]=\"['/order-create']\">\r\n        <i class=\"material-icons\">playlist_add</i>\r\n      </button>\r\n      <button mat-mini-fab color=\"primary\" [routerLink]=\"['/menu-list']\">\r\n        <i class=\"material-icons\">format_list_bulleted</i>\r\n      </button>\r\n      <button mat-mini-fab color=\"primary\" (click)=\"print()\">\r\n        <i class=\"material-icons\">print</i>\r\n      </button>\r\n  </div>\r\n</div>\r\n\r\n<router-outlet></router-outlet>\r\n"
+module.exports = "<div style=\"text-align:center\">\r\n  <h4>\r\n    Welcome to {{ title }}! ver. {{version}}\r\n  </h4>\r\n  <div>\r\n      <button mat-mini-fab color=\"primary\" [routerLink]=\"['/order-list']\">\r\n        <i class=\"material-icons\">list</i>\r\n      </button>\r\n      <button mat-mini-fab color=\"accent\" [routerLink]=\"['/order-create']\">\r\n        <i class=\"material-icons\">playlist_add</i>\r\n      </button>\r\n      <button mat-mini-fab color=\"primary\" [routerLink]=\"['/menu-list']\">\r\n        <i class=\"material-icons\">format_list_bulleted</i>\r\n      </button>\r\n      <button mat-mini-fab color=\"primary\" *ngIf=\"isShowPRN\" (click)=\"print()\">\r\n        <i class=\"material-icons\">print</i>\r\n      </button>\r\n  </div>\r\n</div>\r\n\r\n<router-outlet></router-outlet>\r\n"
 
 /***/ }),
 
@@ -6474,15 +6474,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _package_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../package.json */ "./package.json");
 var _package_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../package.json */ "./package.json", 1);
+/* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./services/data.service */ "./src/app/services/data.service.ts");
+
 
 
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent() {
+    function AppComponent(dataService) {
+        this.dataService = dataService;
         this.title = 'A7RA';
         this.version = _package_json__WEBPACK_IMPORTED_MODULE_2__["version"];
     }
+    AppComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.dataService.isShowPRNButton.subscribe(function (res) { _this.isShowPRN = res; });
+    };
     AppComponent.prototype.print = function () {
+        this.dataService.changeStatePrnButton(false);
         window.print();
     };
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -6490,7 +6498,8 @@ var AppComponent = /** @class */ (function () {
             selector: 'app-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
-        })
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_data_service__WEBPACK_IMPORTED_MODULE_3__["DataService"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -6611,7 +6620,7 @@ module.exports = "table {\r\n    width: -webkit-fill-available;\r\n}\r\n/*# sour
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <table mat-table [dataSource]=\"menulist\" class=\"mat-elevation-z8\">\r\n    <ng-container matColumnDef=\"name\">\r\n      <th mat-header-cell *matHeaderCellDef>Name</th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\r\n    </ng-container>\r\n\r\n    <ng-container matColumnDef=\"price\">\r\n      <th mat-header-cell *matHeaderCellDef>Price</th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.price}} </td>\r\n    </ng-container>\r\n\r\n    <ng-container matColumnDef=\"qty\">\r\n      <th mat-header-cell *matHeaderCellDef>Qty</th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.qty}} </td>\r\n    </ng-container>\r\n\r\n    <ng-container matColumnDef=\"discount\">\r\n      <th mat-header-cell *matHeaderCellDef>Discount</th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.discount}} </td>\r\n    </ng-container>\r\n\r\n    <ng-container matColumnDef=\"Del\">\r\n        <th mat-header-cell *matHeaderCellDef>Del</th>\r\n        <td mat-cell *matCellDef=\"let element\">\r\n            <button mat-mini-fab aria-label=\"Example icon-button with a heart icon\" (click)=\"onDelete(element.id)\">\r\n                <a mat-mini-fab >\r\n                  <mat-icon class=\"md-18\">delete</mat-icon>\r\n                </a>\r\n              </button>\r\n        </td>\r\n      </ng-container>\r\n\r\n      <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n  </table>\r\n</div>\r\n\r\n<div>\r\n  <button mat-mini-fab color=\"primary\" (click)=\"createMenuItem()\"><mat-icon>add</mat-icon></button>\r\n</div>"
+module.exports = "<div>\r\n  <table mat-table [dataSource]=\"menulist\" class=\"mat-elevation-z8\">\r\n    <ng-container matColumnDef=\"name\">\r\n      <th mat-header-cell *matHeaderCellDef>Name</th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\r\n    </ng-container>\r\n\r\n    <ng-container matColumnDef=\"price\">\r\n      <th mat-header-cell *matHeaderCellDef>Price</th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.price}} </td>\r\n    </ng-container>\r\n\r\n    <ng-container matColumnDef=\"qty\">\r\n      <th mat-header-cell *matHeaderCellDef>Qty</th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.qty}} </td>\r\n    </ng-container>\r\n\r\n    <ng-container matColumnDef=\"discount\">\r\n      <th mat-header-cell *matHeaderCellDef>Discount</th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.discount}} </td>\r\n    </ng-container>\r\n    \r\n    <ng-container matColumnDef=\"Del\">\r\n        <th mat-header-cell *matHeaderCellDef>Del</th>\r\n        <td mat-cell *matCellDef=\"let element\">\r\n            <button mat-mini-fab color=\"warn\" (click)=\"onDelete(element.id)\">\r\n              <i class=\"material-icons\">delete</i>\r\n            </button>\r\n        </td>\r\n      </ng-container>\r\n\r\n      <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n  </table>\r\n</div>\r\n\r\n<div>\r\n  <button mat-mini-fab color=\"primary\" (click)=\"createMenuItem()\"><mat-icon>add</mat-icon></button>\r\n</div>"
 
 /***/ }),
 
@@ -6938,7 +6947,7 @@ module.exports = ".mat-form-field {\r\n  font-size: 12px;\r\n  width: 27%;\r\n}\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"print-section\">\r\n  <div *ngIf=\"orderId || selectedMenu?.length\">\r\n    <ul class=\"heroes\">\r\n      <li *ngFor=\"let emp of selectedMenu\" (click)=\"openDialog(emp)\">\r\n        {{emp.name}} {{emp.price}} {{emp.qty}} {{emp.discount}}\r\n          <button mat-mini-fab (click)=\"onDelete(emp.id)\">X</button>\r\n      </li>\r\n    </ul>\r\n    <div style=\"display: flex; justify-content: space-between;\">\r\n        <button mat-mini-fab color=\"primary\" (click)=\"onSave()\">\r\n            <i class=\"material-icons\">save</i>\r\n        </button>\r\n        <button mat-mini-fab color=\"primary\" (click)=\"printForm()\">\r\n            <i class=\"material-icons\">pageview</i>\r\n        </button>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<mat-form-field>\r\n    <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Поиск\">\r\n</mat-form-field>\r\n  <mat-form-field style=\"text-align: center; width: 40px;\">\r\n    <input matInput [(ngModel)]=\"orderNo\" placeholder=\"Номер стола\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: center; width: 80px;\">\r\n    <input matInput [(ngModel)]=\"orderDate\" placeholder=\"Открыт стол\">\r\n</mat-form-field> \r\n<mat-form-field style=\"text-align: right; width: 60px;\">\r\n    <input matInput type=\"number\"  [(ngModel)]=\"orderSum\" placeholder=\"Сумма счета\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: right; width: 40px;\">\r\n    <input matInput type=\"number\" [(ngModel)]=\"orderDiscount\" placeholder=\"Дисконт\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: right; width: 60px;\">\r\n    <input matInput type=\"number\" [(ngModel)]=\"orderDiscountSum\" placeholder=\"Сумма дисконта\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: right; width: 60px;\">\r\n    <input matInput type=\"number\" [(ngModel)]=\"orderSumService\" placeholder=\"Сумма обсл.\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: right; width: 80px;\">\r\n    <input matInput type=\"number\" [(ngModel)]=\"orderSumToPay\" placeholder=\"Сумма к оплате\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: right; width: 40px;\">\r\n  <input matInput type=\"number\" [(ngModel)]=\"orderGuests\" placeholder=\"Гостей\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: center; width: 110px;\">\r\n  <input matInput [(ngModel)]=\"printTime\" placeholder=\"Время печати\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: center; width: 50px;\">\r\n  <input matInput [(ngModel)]=\"place\" placeholder=\"Место\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: center; width: 100px;\">\r\n  <input matInput [(ngModel)]=\"waiter\" placeholder=\"Официант\">\r\n</mat-form-field>\r\n\r\n<table mat-table [dataSource]=\"filteredMenulist\" class=\"mat-elevation-z8\">\r\n  <!-- Add Column -->\r\n    <ng-container matColumnDef=\"add\">\r\n        <th mat-header-cell *matHeaderCellDef>add</th>\r\n        <td mat-cell *matCellDef=\"let element\">\r\n            <button mat-mini-fab color=\"warn\" (click)=\"onAdd(element)\">\r\n                <i class=\"material-icons\">add</i>\r\n            </button>\r\n        </td>\r\n      </ng-container>\r\n\r\n  <ng-container matColumnDef=\"name\">\r\n    <th mat-header-cell *matHeaderCellDef> Name </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"price\">\r\n    <th mat-header-cell *matHeaderCellDef> Price </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.price}} </td>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"qty\">\r\n    <th mat-header-cell *matHeaderCellDef> Qty </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.qty}} </td>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"discount\">\r\n    <th mat-header-cell *matHeaderCellDef> Discount </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.discount}} </td>\r\n  </ng-container>\r\n\r\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\">\r\n  </tr>\r\n</table>"
+module.exports = "<div id=\"print-section\">\r\n  <div *ngIf=\"orderId || selectedMenu?.length\">\r\n    <ul class=\"heroes\">\r\n      <li *ngFor=\"let emp of selectedMenu\" (click)=\"openDialog(emp)\">\r\n        {{emp.name}} {{emp.price}} {{emp.qty}} {{emp.discount}}\r\n          <button mat-mini-fab color=\"warn\" (click)=\"onDelete(emp.id)\">\r\n            <i class=\"material-icons\">delete</i>\r\n          </button>\r\n      </li>\r\n    </ul>\r\n    <div style=\"display: flex; justify-content: space-between;\">\r\n        <button mat-mini-fab color=\"primary\" (click)=\"onSave()\">\r\n            <i class=\"material-icons\">save</i>\r\n        </button>\r\n        <button mat-mini-fab color=\"primary\" (click)=\"printForm()\">\r\n            <i class=\"material-icons\">pageview</i>\r\n        </button>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<mat-form-field>\r\n    <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Поиск\">\r\n</mat-form-field>\r\n  <mat-form-field style=\"text-align: center; width: 40px;\">\r\n    <input matInput [(ngModel)]=\"orderNo\" placeholder=\"Номер стола\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: center; width: 80px;\">\r\n    <input matInput [(ngModel)]=\"orderDate\" placeholder=\"Открыт стол\">\r\n</mat-form-field> \r\n<mat-form-field style=\"text-align: right; width: 60px;\">\r\n    <input matInput type=\"number\"  [(ngModel)]=\"orderSum\" placeholder=\"Сумма счета\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: right; width: 40px;\">\r\n    <input matInput type=\"number\" [(ngModel)]=\"orderDiscount\" placeholder=\"Дисконт\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: right; width: 60px;\">\r\n    <input matInput type=\"number\" [(ngModel)]=\"orderDiscountSum\" placeholder=\"Сумма дисконта\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: right; width: 60px;\">\r\n    <input matInput type=\"number\" [(ngModel)]=\"orderSumService\" placeholder=\"Сумма обсл.\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: right; width: 80px;\">\r\n    <input matInput type=\"number\" [(ngModel)]=\"orderSumToPay\" placeholder=\"Сумма к оплате\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: right; width: 40px;\">\r\n  <input matInput type=\"number\" [(ngModel)]=\"orderGuests\" placeholder=\"Гостей\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: center; width: 110px;\">\r\n  <input matInput [(ngModel)]=\"printTime\" placeholder=\"Время печати\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: center; width: 50px;\">\r\n  <input matInput [(ngModel)]=\"place\" placeholder=\"Место\">\r\n</mat-form-field>\r\n<mat-form-field style=\"text-align: center; width: 100px;\">\r\n  <input matInput [(ngModel)]=\"waiter\" placeholder=\"Официант\">\r\n</mat-form-field>\r\n\r\n<table mat-table [dataSource]=\"filteredMenulist\" class=\"mat-elevation-z8\">\r\n  <!-- Add Column -->\r\n    <ng-container matColumnDef=\"add\">\r\n        <th mat-header-cell *matHeaderCellDef>add</th>\r\n        <td mat-cell *matCellDef=\"let element\">\r\n            <button mat-mini-fab color=\"warn\" (click)=\"onAdd(element)\">\r\n                <i class=\"material-icons\">add</i>\r\n            </button>\r\n        </td>\r\n      </ng-container>\r\n\r\n  <ng-container matColumnDef=\"name\">\r\n    <th mat-header-cell *matHeaderCellDef> Name </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"price\">\r\n    <th mat-header-cell *matHeaderCellDef> Price </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.price}} </td>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"qty\">\r\n    <th mat-header-cell *matHeaderCellDef> Qty </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.qty}} </td>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"discount\">\r\n    <th mat-header-cell *matHeaderCellDef> Discount </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.discount}} </td>\r\n  </ng-container>\r\n\r\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\">\r\n  </tr>\r\n</table>"
 
 /***/ }),
 
@@ -7074,6 +7083,7 @@ var OrderDetailComponent = /** @class */ (function () {
         }
     };
     OrderDetailComponent.prototype.printForm = function () {
+        this.dataService.changeStatePrnButton(true);
         var navigationExtras = { queryParams: { selectedMenu: JSON.stringify(this.selectedMenu),
                 orderSum: this.orderSum.toFixed(2),
                 orderDate: this.orderDate,
@@ -7632,14 +7642,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DataService", function() { return DataService; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
+
 
 
 
 var DataService = /** @class */ (function () {
+    //public formData: menuItem;
     function DataService(firestore) {
         this.firestore = firestore;
+        this.statePrintButton = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](false);
+        this.isShowPRNButton = this.statePrintButton.asObservable();
     }
+    DataService.prototype.changeStatePrnButton = function (res) {
+        this.statePrintButton.next(res);
+    };
     DataService.prototype.getMenuList = function () {
         return this.firestore.collection('menulist').snapshotChanges();
     };
@@ -7657,12 +7675,16 @@ var DataService = /** @class */ (function () {
         return this.firestore.collection('orders').doc(id);
     };
     DataService.prototype.deleteOrder = function (id) {
+        //this.firestore.collection('orders').doc(id).ref.collection('lines').parent.delete();
+        //this.firestore.collection('orders').doc(id).delete();
+    };
+    DataService.prototype.showPrinButton = function () {
     };
     DataService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__["AngularFirestore"]])
     ], DataService);
     return DataService;
 }());

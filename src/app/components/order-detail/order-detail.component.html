@@ -12,6 +12,7 @@
         <button mat-mini-fab color="primary" (click)="onSave()">
             <i class="material-icons">save</i>
         </button>
+        <mat-slide-toggle [checked]="done" (change)="toggle($event)">{{ doneInfo }}</mat-slide-toggle>
         <button mat-mini-fab color="primary" (click)="printForm()">
             <i class="material-icons">pageview</i>
         </button>

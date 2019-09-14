@@ -7,6 +7,7 @@ import { ActivatedRoute, Router, NavigationExtras }     from '@angular/router';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Subscription, Observable, Subject } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatSlideToggleChange } from '@angular/material';
 
 export interface DialogData {
   id: string;
@@ -44,6 +45,8 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
   printed: string = '';
   waiter: string = '';
   buttonState: boolean;
+  done: boolean;
+  doneInfo: string;
 
   constructor(private dataService: DataService, private route: ActivatedRoute, private router: Router,
     private firestore: AngularFirestore, public dialog: MatDialog, private _snackBar: MatSnackBar) {
@@ -104,7 +107,7 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
         //isDone: true, this.orderSumToPay = this.orderSumService;
       });
       this.storeOrderItems(this.orderId);
-      this.openSnackBar();
+      this.dataService.openSnackBar('Создание зказа...', 'завершено!');
     //this.firestore.collection('orders').doc(this.orderId).collection('lines')
     } else {
       //add new document
@@ -200,10 +203,6 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
 
   }
 
-  openSnackBar() {
-    this._snackBar.open('Создание зказа...', 'завершено!', {duration: 1000, verticalPosition: 'top'})
-  }
-
   getOrderItems2() {
       if (this.orderId) {
       this.dataService.getSubCollection(this.orderId).subscribe(actionArray => {
@@ -236,6 +235,8 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
             this.place = doc.data().place;
             this.printed = doc.data().printed;
             this.waiter = doc.data().waiter;
+            this.done = doc.data().isDone;
+            this.doneInfo = this.done ? 'Закрыт': 'Открыт'
           }
         )
       }
@@ -280,6 +281,23 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
         }
       }
     });
+  }
+
+  public toggle(event: MatSlideToggleChange) {
+    //console.log('toggle', event.checked);
+    this.dataService.changeDoneStatus(this.orderId, event.checked);
+    switch (this.doneInfo ) {
+      case 'Закрыт':
+        this.doneInfo = 'Открыт';
+        break;
+      case 'Открыт':
+        this.doneInfo = 'Закрыт';
+        break;    
+      default:
+        this.doneInfo = 'Закрыт';
+        break;
+    }
+    //this.useDefault = event.checked;
   }
 
 }
