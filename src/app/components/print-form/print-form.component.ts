@@ -10,7 +10,7 @@ import { DataService } from '../../services/data.service';
 })
 export class PrintFormComponent implements OnInit {
   selectedMenu: menuItem[] = [];;
-  orderSum: number;
+  orderSumToPay: number;
   orderDate: string;
   orderNo: string;
   orderGuests: number;
@@ -28,7 +28,7 @@ export class PrintFormComponent implements OnInit {
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       this.selectedMenu = JSON.parse(params['selectedMenu']);
-      this.orderSum = params['orderSum'];
+      this.orderSumToPay = params['orderSumToPay'];
       this.orderDate = params['orderDate'];
       this.orderNo = params['orderNo'];
       this.orderGuests = params['orderGuests'];

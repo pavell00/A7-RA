@@ -132,16 +132,16 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
   }
 
   caclSumOrder() {
-    this.orderSum = 0.0;
-    let ssum: number = 0.0;
-    this.selectedMenu.forEach(
-      item => {
-        ssum += Math.round(item.price * item.qty);
-      }
-    )
-    this.orderSum = ssum;
-    this.orderDiscountSum = Math.round(this.orderSum * (this.orderDiscount /100.0));
-    this.orderSumToPay = (this.orderSum - this.orderDiscountSum + this.orderSumService) * 1;
+      this.orderSum = 0.0;
+      let ssum: number = 0.0;
+      this.selectedMenu.forEach(
+        item => {
+          ssum += Math.round(item.price * item.qty);
+        }
+      )
+      this.orderSum = ssum;
+      this.orderDiscountSum = Math.round(this.orderSum * (this.orderDiscount /100.0));
+      this.orderSumToPay = (this.orderSum - this.orderDiscountSum + this.orderSumService) * 1;
   }
 
   ngAfterContentInit() {
@@ -155,7 +155,7 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
     this.dataService.changeStatePrnButton(true);
     let navigationExtras: NavigationExtras = { queryParams: 
       { selectedMenu: JSON.stringify(this.selectedMenu), 
-        orderSum: this.orderSum.toFixed(2),
+        orderSumToPay: this.orderSumToPay.toFixed(2),
         orderDate: this.orderDate,
         orderNo: this.orderNo,
         orderGuests: this.orderGuests,
