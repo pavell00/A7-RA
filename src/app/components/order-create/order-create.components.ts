@@ -11,7 +11,7 @@ import { Order } from '../../models/order';
 export class OrderCreateComponent implements OnInit {
     newOrder: Order;
     orderDate: string = new Date().toLocaleString('ru');
-    orderNo: string = '№ 1';
+    orderNo: string = '1';
     orderSum: number = 0;
     orderDiscount: number = 0;
     orderIsDone: boolean = false;

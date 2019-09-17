@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { menuItem } from '../../models/menuItem';
 import { DataService } from '../../services/data.service';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
@@ -11,7 +11,11 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class MenuListComponent implements OnInit {
   menulist : menuItem[] = [];
-  displayedColumns = ['name', 'price', 'qty', 'discount', 'Del'];
+  displayedColumns = ['name', 'price', 'qty', 'Del'];
+  menuName: string;
+  menuQty: number;
+  menuPrice: number;
+  menuDisc: number;
   
   constructor(private dataService: DataService, private router : Router,
     private firestore: AngularFirestore) { }
@@ -32,10 +36,23 @@ export class MenuListComponent implements OnInit {
     this.router.navigateByUrl('menuItem-create');
   }
 
+  editMenuItem(item: menuItem) {
+    let navigationExtras: NavigationExtras = { 
+      queryParams: {
+        'menuid': item.id, 
+        'menuName': item.name,
+        'menuQty': item.qty,
+        'menuPrice': item.price,
+        'menuDisc': item.discount
+      }
+    };
+    this.router.navigate(['/menuItem-create'], navigationExtras);
+  }
+
   onDelete(id: string) {
     if (confirm("вы уверенны что хотите удалить запись?")) {
       this.firestore.doc('menulist/' + id).delete();
-      this.dataService.openSnackBar('Удаление меню...','завершено!');
+      this.dataService.openSnackBar('Удаление эелемента меню...','завершено!');
     }
   }
 
