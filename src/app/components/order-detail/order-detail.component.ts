@@ -27,6 +27,7 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
   filteredMenulist : menuItem[] = [];
   selectedMenu : menuItem[] = [];
   displayedColumns = ['add','name', 'price', 'qty', 'discount'];
+  displayedCols = ['name', 'price', 'qty', 'sum', 'Actions'];
   subscription: Subscription;
 
   orderDate: string = new Date().toLocaleString();
@@ -107,7 +108,7 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
         //isDone: true, this.orderSumToPay = this.orderSumService;
       });
       this.storeOrderItems(this.orderId);
-      this.dataService.openSnackBar('Создание зказа...', 'завершено!');
+      this.dataService.openSnackBar('Сохранение зказа...', 'завершено!');
     //this.firestore.collection('orders').doc(this.orderId).collection('lines')
     } else {
       //add new document
