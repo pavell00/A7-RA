@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFireFunctions } from '@angular/fire/functions';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
@@ -11,7 +12,13 @@ export class DataService {
   private statePrintButton = new BehaviorSubject<boolean>(false);
   isShowPRNButton = this.statePrintButton.asObservable();
   //public formData: menuItem;
-  constructor(private firestore: AngularFirestore, private _snackBar: MatSnackBar) { }
+  constructor(private firestore: AngularFirestore, private _snackBar: MatSnackBar,
+    private fns: AngularFireFunctions) { }
+
+  deleteOrder_cfn(id: string): Observable<string> {
+    const docid = { docid: id };
+    return this.fns.httpsCallable('del_order')(docid)
+  }
 
   changeStatePrnButton(res: boolean) {
     this.statePrintButton.next(res);

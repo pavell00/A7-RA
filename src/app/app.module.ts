@@ -13,6 +13,7 @@ import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { AngularFireFunctionsModule } from '@angular/fire/functions';
 
 import { DataService } from './services/data.service';
 import { AppRoutingModule } from './app-routing.module';
@@ -38,6 +39,7 @@ import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
+    AngularFireFunctionsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,

@@ -205,8 +205,11 @@ export class OrderListComponent implements OnInit {
     return txt;
   }
 
-  delteOrder(id: string) {
-    this.dataService.deleteOrder(id);
+  deleteOrder(id: string) {
+    this.dataService.deleteOrder_cfn(id).subscribe(
+      res => this.dataService.openSnackBar('Удаление заказа...', 'завершено!'), //console.log(res),
+      error =>  console.log(error)
+    )
   }
 
   getDocName(id: string) {
