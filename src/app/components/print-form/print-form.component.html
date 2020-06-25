@@ -77,7 +77,7 @@
     
     <div style="font-size: 14px;margin-top: 23px;">
       <div style="display: flex; justify-content: space-between;font-family: Calibri Light;margin-bottom: -2.2em;">
-        <p>Чек #{{ orderNo }}</p>
+        <p>Чек #{{ orderCheck }}</p>
         <p>Стол # {{ orderNo }}</p>
         <p>Гостей {{ orderGuests }}</p>
       </div>
@@ -89,32 +89,33 @@
       </div>
     </div>
     
-
-
-      <p>Офиц: {{ waiter }}</p>
-      <p>Напечатал: {{ printed }}</p>
-      <p>Печать: {{ printTime }}</p>
+    <div style="font-family: Calibri Light;line-height: 0.4px; margin-top: -24px;">
+>     <div style="display: flex; justify-content: left;">
+          <p> Кассир:</p>
+          <p style=" text-indent: 1.5em;"> {{ printed }}</p>
+      </div>
+      <p style="margin-top: -2px;">Официант: {{ waiter }}</p>
+    </div>
     
-
-    <table style="line-height: 1.1; border-collapse: collapse; width: 100%;">
+    <table style="line-height: 1.1; border-collapse: collapse; width: 100%; font-family: Calibri Light;">
       <thead style="text-align: left;">
         <!--<tr>
           <th>Перечень заказа</th>
         </tr>-->
-        <th style="border-bottom: 1px solid black;">Наименование</th>
-        <th style="text-align: center; border-bottom: 1px solid black;">К-во</th>
-        <th style="text-align: right; border-bottom: 1px solid black;">Сумма</th>
+        <th style="border-bottom: 1px dashed black;font-weight:normal">Блюдо</th>
+        <th style="text-align: right; border-bottom: 1px dashed black;font-weight:normal;width:50px">Кол-во</th>
+        <th style="text-align: right; border-bottom: 1px dashed black;font-weight:normal">Сумма</th>
       </thead>
       <tbody>
         <tr *ngFor="let emp of selectedMenu">
           <td >{{emp.name}}</td>
-          <td style="text-align: center">{{emp.qty}}</td>
-          <td style="text-align: right;">{{(emp.price * emp.qty).toFixed(2)}}</td>
+          <td style="text-align: right">{{emp.qty | number : '1.2'}}</td>
+          <td style="text-align: right">{{(emp.price * emp.qty).toFixed(2)}}</td>
         </tr>
         <tr>
-          <td style="line-height: 0.2; text-align: right; border-top: 1px solid black;"></td>
-          <td style="line-height: 0.2; text-align: right; border-top: 1px solid black;"></td>
-          <td style="line-height: 0.2; text-align: right; border-top: 1px solid black;"></td>
+          <td style="line-height: 0.2; text-align: right; border-top: 1px dashed black;"></td>
+          <td style="line-height: 0.2; text-align: right; border-top: 1px dashed black;"></td>
+          <td style="line-height: 0.2; text-align: right; border-top: 1px dashed black;"></td>
         </tr>
       </tbody>
     </table>
@@ -125,7 +126,7 @@
         <th style="border-top: 1px solid black; text-align: right;"><b>{{ orderSum }}</b></th>
       </thead>
     </table>-->
-    <div style="border-top: 1px solid black; padding-left: 100px; font-size: 19px; margin-top: 1px;">
+    <div>
       <b style="line-height:20px">К оплате:</b>
       <b style="line-height:20px; float: right;">{{ orderSumToPay }}</b>
     </div>

@@ -25,6 +25,7 @@ export class PrintFormComponent implements OnInit {
   shortOrderDate : string = '';
   timeOpenTable: string = '';
   shortPrintTime: string = '';
+  orderCheck: string = '';
 
   constructor(private route: ActivatedRoute, private dataService: DataService) { }
 
@@ -43,6 +44,7 @@ export class PrintFormComponent implements OnInit {
       this.shortOrderDate = params['shortOrderDate']
       this.timeOpenTable = params['timeOpenTable']
       this.shortPrintTime = params['shortPrintTime']
+      this.orderCheck = params['orderCheck']
     });
     this.dataService.getParams().get().toPromise().then(
       param => {//console.log("params data:", doc.data())
