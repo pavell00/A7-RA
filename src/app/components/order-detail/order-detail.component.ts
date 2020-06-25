@@ -152,7 +152,8 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
     } 
   }
 
-  printForm() {
+  printForm(restaurant : string) {
+    console.log(restaurant)
     this.dataService.changeStatePrnButton(true);
     let navigationExtras: NavigationExtras = { queryParams: 
       { selectedMenu: JSON.stringify(this.selectedMenu), 
@@ -163,7 +164,8 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
         printTime: this.printTime,
         place: this.place,
         printed: this.printed,
-        waiter: this.waiter
+        waiter: this.waiter,
+        restaurant: restaurant
       },
     };
     this.router.navigate(['/print-form'], navigationExtras);
