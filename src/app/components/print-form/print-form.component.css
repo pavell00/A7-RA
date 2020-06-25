@@ -1,8 +1,7 @@
-div {
+div.almondo {
     font-family: Calibri Light; 
     font-size: 14px; font-style: normal; 
     line-height: 0.4;
-
 }
 
 pre {
@@ -15,4 +14,20 @@ pre {
 .header2 {
     float: left;
     text-align: left;
+}
+
+.queenheader {
+    font-family: Calibri Light; 
+    font-size: 14px; font-style: normal; 
+    line-height: 0.4;
+}
+
+.imagequeen {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+    height: 50%;
+    width: 50%;
 }

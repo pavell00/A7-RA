@@ -17,7 +17,7 @@ export class OrderCreateComponent implements OnInit {
     orderIsDone: boolean = false;
     orderGuests: number = 1;
     orderPrintTime: string = new Date().toLocaleString('ru').replace(',', '');
-    orderCheck: number = 1;
+    orderCheck: number = Math.floor(Math.random() * (999999 - 100000)) + 100000;
     orderSumService: number = 0;
     place: string = 'Зал';
     waiter: string = 'Кулешов Андрей';
@@ -28,11 +28,17 @@ export class OrderCreateComponent implements OnInit {
 
     ngOnInit(): void {
       let d = new Date();
-      let dd: string = (d.getDay() + 1).toString();
+      let day = d.getDate();
+      /*let dd: string = (d.getDay() + 1).toString();
       let mm: string = (d.getMonth() + 1).toString();
       if (mm.length == 1) {mm = '0'+mm;}
       if (dd.length == 1) {dd = '0'+dd;}
-      let date: string = dd+'/'+mm+' '+d.getHours()+':'+d.getMinutes();
+      let date: string = dd+'/'+mm+' '+d.getHours()+':'+d.getMinutes();*/
+      let date: string = 
+        (day<10?'0':'') + (day) +'/'+ 
+        ((d.getMonth()+1)<10?'0':'') + (d.getMonth()+1) +' '+ 
+        (d.getHours()<10?'0':'') + d.getHours() + ':' +
+        (d.getMinutes()<10?'0':'') + d.getMinutes() 
       this.orderDate = date;
     }
 

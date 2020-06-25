@@ -48,10 +48,10 @@
             <i class="material-icons">save</i>
         </button>
         <mat-slide-toggle [checked]="done" (change)="toggle($event)">{{ doneInfo }}</mat-slide-toggle>
-        <button mat-mini-fab color="primary" (click)="printForm('almondo')">
+        <!--<button mat-mini-fab color="primary" (click)="printForm('almondo')">
             <i class="material-icons">pageview</i>
-        </button>
-        <button mat-mini-fab color="warn" (click)="printForm('queen')">
+        </button>-->
+        <button mat-mini-fab color="primary" (click)="printForm('queen')">
           <i class="material-icons">pageview</i>
       </button>
     </div>
@@ -93,6 +93,9 @@
 </mat-form-field>
 <mat-form-field style="text-align: center; width: 100px;">
   <input matInput [(ngModel)]="waiter" placeholder="Официант">
+</mat-form-field>
+<mat-form-field style="text-align: center; width: 80px;">
+  <input matInput [(ngModel)]="orderCheck" placeholder="Номер чека">
 </mat-form-field>
 
 <table mat-table [dataSource]="filteredMenulist" class="mat-elevation-z8">

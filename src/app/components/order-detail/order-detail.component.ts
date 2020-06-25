@@ -48,6 +48,7 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
   buttonState: boolean;
   done: boolean;
   doneInfo: string;
+  orderCheck: number;
 
   constructor(private dataService: DataService, private route: ActivatedRoute, private router: Router,
     private firestore: AngularFirestore, public dialog: MatDialog, private _snackBar: MatSnackBar) {
@@ -153,7 +154,14 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
   }
 
   printForm(restaurant : string) {
-    console.log(restaurant)
+    let dateArr = this.orderDate.split(' ');
+    let firstPart = dateArr[0] + '.' + new Date().getFullYear().toString();
+    let finalyValue = firstPart.replace('/','.');
+    let secontValue = dateArr[1]
+    let timeArr = this.printTime.split(' ');
+    let strTime = timeArr[1];
+    let shortTime = strTime.slice(0, -3)
+    
     this.dataService.changeStatePrnButton(true);
     let navigationExtras: NavigationExtras = { queryParams: 
       { selectedMenu: JSON.stringify(this.selectedMenu), 
@@ -165,7 +173,11 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
         place: this.place,
         printed: this.printed,
         waiter: this.waiter,
-        restaurant: restaurant
+        restaurant: restaurant,
+        shortOrderDate: finalyValue,
+        timeOpenTable: secontValue,
+        shortPrintTime: shortTime,
+        orderCheck: this.orderCheck
       },
     };
     this.router.navigate(['/print-form'], navigationExtras);
@@ -239,7 +251,8 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
             this.printed = doc.data().printed;
             this.waiter = doc.data().waiter;
             this.done = doc.data().isDone;
-            this.doneInfo = this.done ? 'Закрыт': 'Открыт'
+            this.doneInfo = this.done ? 'Закрыт': 'Открыт';
+            this.orderCheck = doc.data().check;
           }
         )
       }

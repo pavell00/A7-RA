@@ -27,6 +27,7 @@ export const passdata = functions.https.onRequest((req, res) => {
     //link to run https://us-central1-myfirstfbapp-4fa9f.cloudfunctions.net/passdata?siteid=ww11
 });
 
+/*
 export const mydel = functions.https.onRequest((request, response) => {
     return admin.firestore()
     .collection('test').doc('4l8VGkRLxUvj7X9G7W7B')
@@ -37,6 +38,7 @@ export const mydel = functions.https.onRequest((request, response) => {
     )
 })
 
+
 export const mydel3 = functions.https.onRequest((request, response) => {
     return admin.firestore()
     .collection('test').doc('4l8VGkRLxUvj7X9G7W7B')
@@ -45,7 +47,7 @@ export const mydel3 = functions.https.onRequest((request, response) => {
         () => response.send("Deleting entire document is finished!")
     )  
 })
-
+*/
 export const getsub = functions.https.onRequest((request, response) => {
     return admin.firestore()
     .collection('test').doc('ehhPw6sQ8hK3kITRwDIm').collection('rows')
@@ -67,6 +69,7 @@ export const getsub = functions.https.onRequest((request, response) => {
     // )
 })
 
+/*
 export const del = functions.https.onRequest((request, response) => {
     const ar = [];
     const a = admin.firestore()
@@ -138,7 +141,7 @@ export const alldel2 = functions.https.onRequest((request, response) => {
         }
     )
 })
-
+*/
 export const del2 = functions.https.onCall((data, context)=> {
     //const path = data.path;
     const text = data.message;
