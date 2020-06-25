@@ -20,8 +20,8 @@ export class OrderCreateComponent implements OnInit {
     orderCheck: number = Math.floor(Math.random() * (999999 - 100000)) + 100000;
     orderSumService: number = 0;
     place: string = 'Зал';
-    waiter: string = 'Кулешов Андрей';
-    printed: string= 'Кулешов Андрей';
+    waiter: string = 'Иванов Иван';
+    printed: string= 'Иванов Иван';
 
     constructor(private dataService: DataService,
     private firestore: AngularFirestore) { }

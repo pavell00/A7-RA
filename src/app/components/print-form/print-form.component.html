@@ -67,7 +67,7 @@
     <div style="display: flex; justify-content: center">
       <img class="imagequeen" src="assets/queen.jpg">
     </div>
-    <p style="font-family: Calibri Light;">H</p>
+    <p style="font-family: Calibri Light; margin-top: 0px; margin-bottom: 0px;">H</p>
     <!--<hr width="100%" style="border-bottom: 2px dashed #C0C0C0" color="#FFFFFF" size="6">-->
     <div class="queenheader" style="text-align: center; word-spacing: 3px;">
         <p>Queen Country Club</p>
@@ -75,8 +75,8 @@
         <p>+38-068-1111-888</p>
     </div>
     
-    <div style="font-size: 14px;margin-top: 23px;">
-      <div style="display: flex; justify-content: space-between;font-family: Calibri Light;margin-bottom: -2.2em;">
+    <div style="font-size: 14px;margin-top: 21px;">
+      <div style="display: flex; justify-content: space-between;font-family: Calibri Light;margin-bottom: -2em;">
         <p>Чек #{{ orderCheck }}</p>
         <p>Стол # {{ orderNo }}</p>
         <p>Гостей {{ orderGuests }}</p>
@@ -90,11 +90,11 @@
     </div>
     
     <div style="font-family: Calibri Light;line-height: 0.4px; margin-top: -24px;">
->     <div style="display: flex; justify-content: left;">
-          <p> Кассир:</p>
+      <div style="display: flex; justify-content: left;">
+          <p>Кассир:</p>
           <p style=" text-indent: 1.5em;"> {{ printed }}</p>
       </div>
-      <p style="margin-top: -2px;">Официант: {{ waiter }}</p>
+      <p style="margin-top: 1px;">Официант: {{ waiter }}</p>
     </div>
     
     <table style="line-height: 1.1; border-collapse: collapse; width: 100%; font-family: Calibri Light;">
@@ -102,8 +102,8 @@
         <!--<tr>
           <th>Перечень заказа</th>
         </tr>-->
-        <th style="border-bottom: 1px dashed black;font-weight:normal">Блюдо</th>
-        <th style="text-align: right; border-bottom: 1px dashed black;font-weight:normal;width:50px">Кол-во</th>
+        <th style="border-bottom: 1px dashed black;font-weight:normal; font-family: Calibri Light;">Блюдо</th>
+        <th style="text-align: right; border-bottom: 1px dashed black;font-weight:normal;width:60px">Кол-во</th>
         <th style="text-align: right; border-bottom: 1px dashed black;font-weight:normal">Сумма</th>
       </thead>
       <tbody>
@@ -126,17 +126,29 @@
         <th style="border-top: 1px solid black; text-align: right;"><b>{{ orderSum }}</b></th>
       </thead>
     </table>-->
-    <div>
-      <b style="line-height:20px">К оплате:</b>
-      <b style="line-height:20px; float: right;">{{ orderSumToPay }}</b>
+    <div style="display: flex; justify-content: space-between; 
+      line-height: 0em;margin-top: -2px;margin-bottom: -13px; font-family: Calibri Light;">
+      <p>Всего:</p>
+      <p>{{ orderSumToPay }}</p>
+    </div>
+    <hr style="line-height: 0.2; border-top: 1px dashed black;">
+    <div  style="display: flex; justify-content: space-between; margin-top: -12px; 
+      margin-bottom: -26px; font-family: Calibri Light;line-height: 0em;">
+      <p>Итого к оплате:</p>
+      <p>{{ orderSumToPay }}</p>
     </div>
 
-    <div style="margin-top: 20px; text-align: center;">
-      <p><b>{{footerStr}}</b></p>
-      <p><b>{{footerStr1}}</b></p>
-      <p><b>{{footerStr2}}</b></p>
+    <div  style="display: flex; justify-content: space-between; margin-bottom: -20px;
+      font-family: Calibri Light;">
+      <p>Гривна:</p>
+      <p>{{ orderSumToPay }}</p>
     </div>
-    <hr width="100%" style="border-bottom: 2px dashed #C0C0C0" color="#FFFFFF" size="6">
+    <hr style="line-height: 0.2; border-top: 1px dashed black;">
+    <div style="text-align: center; font-family: Calibri Light; line-height: 0em;">
+      <p>Вознаграждение официанту приветствуется</p>
+      <p>но всегда остается на ваше усмотрение.</p>
+    </div>
+    <!--<hr width="100%" style="border-bottom: 2px dashed #C0C0C0" color="#FFFFFF" size="6">-->
   </ng-template>
 </div>
 
