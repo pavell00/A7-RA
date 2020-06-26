@@ -75,7 +75,7 @@
         <p>+38-068-1111-888</p>
     </div>
     
-    <div style="font-size: 12px; margin-top: 21px;">
+    <div style="font-size: 11px; margin-top: 21px;">
       <div style="display: flex; justify-content: space-between;font-family: Calibri Light;margin-bottom: -2em;">
         <p>Чек #{{ orderCheck }}</p>
         <p>Стол # {{ orderNo }}</p>
@@ -89,7 +89,7 @@
       </div>
     </div>
     
-    <div style="font-family: Calibri Light;line-height: 0.4px; margin-top: -19px; font-size: 12px">
+    <div style="font-family: Calibri Light;line-height: 0.4px; margin-top: -17px; font-size: 11px">
       <div style="display: flex; justify-content: left;">
           <p>Кассир:</p>
           <p style=" text-indent: 1.5em;"> {{ printed }}</p>
@@ -98,7 +98,7 @@
     </div>
     
     <table style="line-height: 1.1; border-collapse: collapse; width: 100%; font-family: Calibri Light;">
-      <thead style="text-align: left; font-size: 12px">
+      <thead style="text-align: left; font-size: 11px">
         <!--<tr>
           <th>Перечень заказа</th>
         </tr>-->
@@ -106,7 +106,7 @@
         <th style="text-align: right; border-bottom: 1px dashed black;font-weight:normal;width:60px">Кол-во</th>
         <th style="text-align: right; border-bottom: 1px dashed black;font-weight:normal">Сумма</th>
       </thead>
-      <tbody style="font-size: 12px">
+      <tbody style="font-size: 11px">
         <tr *ngFor="let emp of selectedMenu">
           <td >{{emp.name}}</td>
           <td style="text-align: right">{{emp.qty | number : '1.2'}}</td>
@@ -126,26 +126,26 @@
         <th style="border-top: 1px solid black; text-align: right;"><b>{{ orderSum }}</b></th>
       </thead>
     </table>-->
-    <div style="display: flex; justify-content: space-between; font-size: 12px;
+    <div style="display: flex; justify-content: space-between; font-size: 11px;
       line-height: 0em;margin-top: -2px;margin-bottom: -10px; font-family: Calibri Light;">
       <p>Всего:</p>
       <p>{{ orderSumToPay }}</p>
     </div>
     <hr style="line-height: 0.2; border-top: 1px dashed black;">
     <div  style="display: flex; justify-content: space-between; margin-top: -12px; 
-      margin-bottom: -20px; font-family: Calibri Light;line-height: 0em; font-size: 12px;">
+      margin-bottom: -20px; font-family: Calibri Light;line-height: 0em; font-size: 11px;">
       <p>Итого к оплате:</p>
       <p>{{ orderSumToPay }}</p>
     </div>
 
     <div  style="display: flex; justify-content: space-between; margin-bottom: -17px;
-      font-family: Calibri Light;font-size: 12px;">
+      font-family: Calibri Light;font-size: 11px;">
       <p>Гривна:</p>
       <p>{{ orderSumToPay }}</p>
     </div>
     <hr style="line-height: 0.2; border-top: 1px dashed black;">
     <div style="text-align: center; font-family: Calibri Light; line-height: 0em;
-      font-size: 12px;">
+      font-size: 11px;">
       <p>Вознаграждение официанту приветствуется</p>
       <p>но всегда остается на ваше усмотрение.</p>
     </div>
