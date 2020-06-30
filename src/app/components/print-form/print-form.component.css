@@ -17,8 +17,8 @@ pre {
 }
 
 .queenheader {
-    font-family: Calibri Light; 
-    font-size: 14px; font-style: normal; 
+    font-family: 'Arial Narrow'; 
+    font-size: 10px; font-style: normal; 
     line-height: 0.4;
 }
 
@@ -28,11 +28,13 @@ pre {
     background-attachment: fixed;
     background-size: cover;
     background-color: #464646;
-    height: 70%;
-    width: 70%;
+    height: 85%;
+    width: 85%;
 }
 
 .queencheckeader {
     font-family: Calibri Light; 
     font-size: 12px; font-style: normal; 
 }
+
+tbody:before {line-height:1px; content:"\200C"; display:block;}
