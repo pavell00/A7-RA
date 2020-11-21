@@ -8,7 +8,7 @@ import { DataService } from './services/data.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'A7RA';
+  title = 'A7RA CAN';
   public version: string = version;
   public isShowPRN: boolean ;
 

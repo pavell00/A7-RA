@@ -97,7 +97,7 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
         OrderDate: this.orderDate, 
         TableNo: this.orderNo,
         sumOrder: this.orderSum,
-        discountOrder: this.orderDiscount,
+        //discountOrder: this.orderDiscount,
         sumDiscount: this.orderDiscountSum,
         sumService: this.orderSumService,
         sumToPay: this.orderSumToPay,
