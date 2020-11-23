@@ -3,6 +3,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireFunctions } from '@angular/fire/functions';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { map } from 'rxjs/operators'
 
 @Injectable({
   providedIn: 'root'
@@ -48,6 +49,17 @@ export class DataService {
   deleteOrder(id: string) {
     //this.firestore.collection('orders').doc(id).ref.collection('lines').parent.delete();
     //this.firestore.collection('orders').doc(id).delete();
+    this.firestore.collection('orders').doc(id).collection('lines').get()
+    .toPromise().then(
+      snapshot => {snapshot.forEach( item => {
+         item.ref.delete()
+         }
+       ),
+       this.firestore.collection('orders').doc(id).delete(),
+       this.openSnackBar('Удаление заказа...', 'завершено!')
+      }
+    )
+
   }
 
   async changeDoneStatus (id: string, status: boolean) {
