@@ -59,8 +59,8 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
       this.menulist = actionArray.map(item => {
         return {
           id: item.payload.doc.id,
-          ...item.payload.doc.data()
-        } as menuItem;
+          ...item.payload.doc.data() as menuItem
+        } //as menuItem;
       })
     });
     // Capture the order ID if available
@@ -97,7 +97,7 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
         OrderDate: this.orderDate, 
         TableNo: this.orderNo,
         sumOrder: this.orderSum,
-        //discountOrder: this.orderDiscount,
+        discountOrder: this.orderDiscount,
         sumDiscount: this.orderDiscountSum,
         sumService: this.orderSumService,
         sumToPay: this.orderSumToPay,

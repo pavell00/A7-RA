@@ -56,7 +56,8 @@ export class OrderCreateComponent implements OnInit {
         printTime: this.orderPrintTime,
         place: this.place,
         printed: this.printed,
-        waiter: this.waiter
+        waiter: this.waiter,
+        sumToPay: this.orderSum + this.orderSumService
       }).then(
         (w) => {
           //this.orderId = w.id;

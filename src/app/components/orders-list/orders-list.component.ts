@@ -213,7 +213,6 @@ export class OrderListComponent implements OnInit {
   }
 
   deleteOrder(id: string) {
-    console.log(id)
     this.dataService.deleteOrder(id)
   }
 
