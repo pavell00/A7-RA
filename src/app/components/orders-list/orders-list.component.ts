@@ -31,8 +31,8 @@ export class OrderListComponent implements OnInit {
       this.orders = actionArray.map(item => {
         return {
           id: item.payload.doc.id,
-          ...item.payload.doc.data()
-        } as Order;
+          ...item.payload.doc.data() as Order
+        } //as Order;
       })
     });
     //console.log(this.orders);

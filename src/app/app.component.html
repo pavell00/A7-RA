@@ -15,6 +15,9 @@
       <button mat-mini-fab color="primary" *ngIf="isShowPRN" (click)="print()">
         <i class="material-icons">print</i>
       </button>
+      <button mat-mini-fab color="primary" [routerLink]="['/test']">
+        <i class="material-icons">format_list_bulleted</i>
+      </button>
   </div>
 </div>
 <router-outlet></router-outlet>

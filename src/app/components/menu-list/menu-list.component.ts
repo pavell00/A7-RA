@@ -25,8 +25,8 @@ export class MenuListComponent implements OnInit {
       this.menulist = actionArray.map(item => {
         return {
           id: item.payload.doc.id,
-          ...item.payload.doc.data()
-        } as menuItem;
+          ...item.payload.doc.data() as menuItem
+        } //as menuItem;
       })
     });
   }

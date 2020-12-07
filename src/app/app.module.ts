@@ -4,10 +4,19 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'; 
 import { FormsModule } from '@angular/forms';
 
-import { MatTableModule, MatFormFieldModule, 
-  MatInputModule, MatButtonModule, MatCheckboxModule, MatOptionModule, MatSelectModule, 
-  MatListModule, MatIconModule, MatSnackBarModule, MatSlideToggleModule,
-  MAT_DIALOG_DATA } from '@angular/material';
+import { MatTableModule} from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule} from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+//import {MatOptionModule} from '@angular/material/';
+import { MatSelectModule } from '@angular/material/select';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+
 import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 
 import { environment } from '../environments/environment';
@@ -25,6 +34,7 @@ import { MenuItemCreateComponent } from './components/menuItem-create/menuItem-c
 import { OrderCreateComponent } from './components/order-create/order-create.components';
 import { PrintFormComponent } from './components/print-form/print-form.component';
 import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
+import { TestPageComponent } from './components/test-page/test-page.component';
 
 @NgModule({
   declarations: [ 
@@ -33,7 +43,8 @@ import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
     MenuListComponent, OrderListComponent, MenuItemCreateComponent,
     OrderCreateComponent,
     PrintFormComponent,
-    SnackBarComponent
+    SnackBarComponent,
+    TestPageComponent
     ],
   imports:      [ 
     BrowserModule,
@@ -46,7 +57,8 @@ import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
     MatListModule, MatIconModule, MatSnackBarModule, MatSlideToggleModule,
     MatIconModule, MatButtonModule, MatSnackBarModule, 
     MatFormFieldModule, MatTableModule, MatDialogModule,
-    MatInputModule, MatOptionModule, MatSelectModule, MatCheckboxModule,
+    MatInputModule, //MatOptionModule, 
+    MatSelectModule, MatCheckboxModule,
     MatListModule,
      HttpClientModule
     ],

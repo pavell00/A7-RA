@@ -7,7 +7,7 @@ import { ActivatedRoute, Router, NavigationExtras }     from '@angular/router';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Subscription, Observable, Subject } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { MatSlideToggleChange } from '@angular/material';
+import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 
 export interface DialogData {
   id: string;
@@ -334,6 +334,9 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
   styleUrls: ['./edit-dialog.css']
 })
 export class DialogOverviewExampleDialog {
+  price: number = 0
+  qty: number = 0
+  discount: number = 0
 
   constructor(
     public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
