@@ -108,28 +108,7 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
         waiter: this.waiter
         //isDone: true, this.orderSumToPay = this.orderSumService;
       });
-      this.storeOrderItems(this.orderId);
       this.dataService.openSnackBar('Сохранение зказа...', 'завершено!');
-    //this.firestore.collection('orders').doc(this.orderId).collection('lines')
-    } else {
-      //add new document
-      let res = this.firestore.collection('orders').add({
-        OrderDate: this.orderDate, 
-        TableNo: this.orderNo,
-        sumOrder: this.orderSum,
-        discountOrder: this.orderDiscount,
-        sumDiscount: this.orderDiscountSum,
-        sumService: this.orderSumService,
-        sumToPay: this.orderSumToPay        
-        //isDone: true,
-      }).then(
-        (w) => {
-          this.orderId = w.id;
-          this.storeOrderItems(w.id);
-          //console.log(w.id)
-          }
-      )
-      //this.storeOrderItems(this.orderId);
     }
   }
 
@@ -266,6 +245,8 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
     let cloned = [...this.selectedMenu];
     this.selectedMenu = cloned;
     //console.log(this.selectedMenu)
+    //insert row of menuItem to DB
+    this.dataService.addLineInOrderDatail(item, this.orderId)
   }
 
   onDelete(id: string) {
@@ -280,6 +261,8 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
     }
     let cloned = [...this.selectedMenu];
     this.selectedMenu = cloned;
+    //delete row of menuItem from DB
+    this.dataService.deleteLineInOrderDatail(id, this.orderId)
   }
 
   applyFilter(filterValue: string) {
@@ -298,6 +281,7 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
       if (result) {
         this.newData = result;
         //console.log(this.newData);
+        //refresh data in array
         for(let i = 0; i < this.selectedMenu.length; i++) {
           if(this.selectedMenu[i].id == this.newData.id) {
             this.selectedMenu[i].price = this.newData.price;
@@ -305,6 +289,9 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
             this.selectedMenu[i].discount = this.newData.discount;
           }
         }
+        //update data in DB subCollection
+        //console.log(this.orderId)
+        this.dataService.updateLineInOrderDatail(this.newData, this.orderId)
       }
     });
   }

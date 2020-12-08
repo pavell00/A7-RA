@@ -4,6 +4,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireFunctions } from '@angular/fire/functions';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { map } from 'rxjs/operators'
+import { menuItem } from '../models/menuItem';
 
 @Injectable({
   providedIn: 'root'
@@ -85,7 +86,47 @@ export class DataService {
 
   openSnackBar(title: string, msg: string) {
     this._snackBar.open(title, msg, 
-      {duration: 1000, verticalPosition: 'top'})
+      {duration: 300, verticalPosition: 'top'})
   }
 
+  async updateLineInOrderDatail (item: menuItem, orderId: string) {
+    var lineRef = this.firestore.collection('orders').doc(orderId).collection('lines').doc(item.id)
+    try {
+      await lineRef.update({
+        price: item.price,
+        qty: item.qty,
+        name: item.name,
+        discount: item.discount
+      })
+      this.openSnackBar('Обновление элемента', 'завершено...');
+    } catch (error) {
+      console.error("Error updating document: ", error);
+    }
+  }
+
+  async addLineInOrderDatail (item: menuItem, orderId: string) {
+    var lineRef = this.firestore.collection('orders').doc(orderId).collection('lines')
+    try {
+      await lineRef.add({
+        line_no: 0,
+        name: item.name,
+        price: item.price,
+        qty: item.qty,
+        discount: item.discount
+      });
+      this.openSnackBar('Добавление элемента', 'завершено...');
+    } catch (error) {
+      console.error("Error adding new row to <line> collection: ", error);
+    }
+  }
+
+  async deleteLineInOrderDatail (id: string, orderId: string) {
+    var lineRef = this.firestore.collection('orders').doc(orderId).collection('lines').doc(id)
+    try {
+      await lineRef.delete()
+      this.openSnackBar('Удаление элемента', 'завершено...');
+    } catch (error) {
+      console.error("Error deleting line menuItem : ", error);
+    }
+  }
 }
