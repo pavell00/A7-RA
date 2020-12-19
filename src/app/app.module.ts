@@ -38,6 +38,7 @@ import { PrintFormComponent } from './components/print-form/print-form.component
 import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
 import { TestPageComponent } from './components/test-page/test-page.component';
 import { SigninComponent } from './components/signin/signin.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [ 
@@ -48,7 +49,8 @@ import { SigninComponent } from './components/signin/signin.component';
     PrintFormComponent,
     SnackBarComponent,
     TestPageComponent,
-    SigninComponent
+    SigninComponent,
+    UserProfileComponent
     ],
   imports:      [ 
     BrowserModule,
@@ -73,8 +75,8 @@ import { SigninComponent } from './components/signin/signin.component';
             enableFirestoreSync: true, // enable/disable autosync users with firestore
             toastMessageOnAuthSuccess: false, // whether to open/show a snackbar message on auth success - default : true
             toastMessageOnAuthError: false, // whether to open/show a snackbar message on auth error - default : true
-            authGuardFallbackURL: '/app-test-page', // url for unauthenticated users - to use in combination with canActivate feature on a route
-            authGuardLoggedInURL: '/orders-list', // url for authenticated users - to use in combination with canActivate feature on a route
+            authGuardFallbackURL: '/signin', // url for unauthenticated users - to use in combination with canActivate feature on a route
+            authGuardLoggedInURL: '/user-profile', // url for authenticated users - to use in combination with canActivate feature on a route
             passwordMaxLength: 60, // `min/max` input parameters in components should be within this range.
             passwordMinLength: 4, // Password length min/max in forms independently of each componenet min/max.
             // Same as password but for the name

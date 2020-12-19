@@ -8,6 +8,7 @@ import { OrderCreateComponent } from './components/order-create/order-create.com
 import { PrintFormComponent } from './components/print-form/print-form.component';
 import { TestPageComponent } from './components/test-page/test-page.component';
 import { SigninComponent } from './components/signin/signin.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { LoggedInGuard } from 'ngx-auth-firebaseui';
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'menu-list', component: MenuListComponent, canActivate: [LoggedInGuard]},
   { path: 'menuItem-create', component: MenuItemCreateComponent, canActivate: [LoggedInGuard]},
   { path: 'print-form', component: PrintFormComponent, canActivate: [LoggedInGuard]},
+  { path: 'user-profile', component: UserProfileComponent, canActivate: [LoggedInGuard]},
   { path: 'test', component: TestPageComponent},
   { path: 'signin', component: SigninComponent},
   { path: '**', redirectTo: '' }

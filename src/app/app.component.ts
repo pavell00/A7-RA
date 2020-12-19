@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { version } from '../../package.json';
 import { DataService } from './services/data.service';
+import { AuthProvider, Theme, AuthProcessService } from 'ngx-auth-firebaseui';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ export class AppComponent implements OnInit {
   public version: string = version;
   public isShowPRN: boolean ;
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService, public auth: AuthProcessService) { }
 
   ngOnInit() {
     this.dataService.isShowPRNButton.subscribe( res => {this.isShowPRN = res;} )

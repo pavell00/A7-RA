@@ -18,6 +18,7 @@ export class SigninComponent implements OnInit {
 
   printUser(event) {
     console.log(event);
+    //this.router.navigate(['locationname']);
   }
 
   printError(event) {
