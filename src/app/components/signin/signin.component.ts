@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthProvider, Theme, AuthProcessService } from 'ngx-auth-firebaseui';
+import { AngularFireAuth } from '@angular/fire/auth'
 
 @Component({
   selector: 'signin',
@@ -10,10 +11,19 @@ export class SigninComponent implements OnInit {
 
   providers = AuthProvider;
   themes = Theme;
-  constructor(public auth: AuthProcessService) { }
+  constructor(public auth: AuthProcessService, public aa: AngularFireAuth) { }
 
   ngOnInit(): void {
+    /* this.auth.afa.idTokenResult.subscribe(
+      idTokenResult => {
+        const claims = idTokenResult.claims
+        if (!!claims) {console.log(claims)}
+      }
+    ) */
     //this.auth.user$.pipe().subscribe(val => console.log(val));
+    /*this.auth.afa.idToken.toPromise().then(
+      res => {console.log(res)}
+    )*/
   }
 
   printUser(event) {
