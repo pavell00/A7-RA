@@ -66,9 +66,9 @@ export class DataService {
   async changeDoneStatus (id: string, status: boolean) {
     var docRef = this.firestore.collection("orders").doc(id);
     try {
-      await docRef.update({
+      await docRef.set({
         isDone: status
-      });
+      },{merge:true});
       let prefix: string;
       if (status) {
         prefix = 'Закрытие заказа...';
@@ -79,7 +79,7 @@ export class DataService {
       this.openSnackBar(prefix, 'завершено...');
     }
     catch (error) {
-      console.error("Error updating document: ", error);
+      console.error("Error updating status document: ", error);
     }
 
   }
@@ -149,7 +149,7 @@ export class DataService {
         sumOrder: orderSum,
         sumToPay: orderSumToPay
       },{merge:true})
-      this.openSnackBar('Обновление элемента', 'завершено...');
+      //this.openSnackBar('Обновление элемента', 'завершено...');
     } catch (error) {
       console.error("Error updating <orders> collection: ", error);
     }

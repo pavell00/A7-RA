@@ -245,8 +245,11 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
     let cloned = [...this.selectedMenu];
     this.selectedMenu = cloned;
     //console.log(this.selectedMenu)
+    //recalc doc sum
+    this.caclSumOrder()
     //insert row of menuItem to DB
     this.dataService.addLineInOrderDatail(item, this.orderId)
+    this.dataService.updateRecalculatedOrderSums (this.orderId, this.orderSum, this.orderSumToPay)
   }
 
   onDelete(id: string) {
@@ -261,8 +264,11 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
     }
     let cloned = [...this.selectedMenu];
     this.selectedMenu = cloned;
+    //recalc doc sum
+    this.caclSumOrder()
     //delete row of menuItem from DB
     this.dataService.deleteLineInOrderDatail(id, this.orderId)
+    this.dataService.updateRecalculatedOrderSums (this.orderId, this.orderSum, this.orderSumToPay)
   }
 
   changeQty(item: menuItem, val: number) {
@@ -273,7 +279,6 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
     }
     //recalc doc sum
     this.caclSumOrder()
-    console.log(this.orderId, this.orderSum, this.orderSumToPay)
     this.dataService.updateQtyInLineInOrderDatail(item, this.orderId)
     this.dataService.updateRecalculatedOrderSums (this.orderId, this.orderSum, this.orderSumToPay)
   }
