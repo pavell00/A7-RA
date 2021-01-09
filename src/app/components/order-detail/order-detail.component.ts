@@ -265,6 +265,19 @@ export class OrderDetailComponent implements OnInit, AfterContentInit {
     this.dataService.deleteLineInOrderDatail(id, this.orderId)
   }
 
+  changeQty(item: menuItem, val: number) {
+    for(let i = 0; i < this.selectedMenu.length; i++) {
+      if(this.selectedMenu[i].id == item.id) {
+        this.selectedMenu[i].qty = +item.qty + val;
+      }
+    }
+    //recalc doc sum
+    this.caclSumOrder()
+    console.log(this.orderId, this.orderSum, this.orderSumToPay)
+    this.dataService.updateQtyInLineInOrderDatail(item, this.orderId)
+    this.dataService.updateRecalculatedOrderSums (this.orderId, this.orderSum, this.orderSumToPay)
+  }
+
   applyFilter(filterValue: string) {
     //this.orderId.pipe(map(m => console.log(m)))
     this.filteredMenulist = this.menulist.filter(v => v.name.toLowerCase().startsWith(filterValue.trim().toLowerCase()));

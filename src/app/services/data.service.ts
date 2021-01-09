@@ -100,7 +100,19 @@ export class DataService {
       })
       this.openSnackBar('Обновление элемента', 'завершено...');
     } catch (error) {
-      console.error("Error updating document: ", error);
+      console.error("Error updating row in <line> collection: ", error);
+    }
+  }
+
+  async updateQtyInLineInOrderDatail (item: menuItem, orderId: string) {
+    var lineRef = this.firestore.collection('orders').doc(orderId).collection('lines').doc(item.id)
+    try {
+      await lineRef.set({
+        qty: item.qty
+      },{merge:true})
+      this.openSnackBar('Обновление элемента', 'завершено...');
+    } catch (error) {
+      console.error("Error updating row in <line> collection: ", error);
     }
   }
 
@@ -127,6 +139,19 @@ export class DataService {
       this.openSnackBar('Удаление элемента', 'завершено...');
     } catch (error) {
       console.error("Error deleting line menuItem : ", error);
+    }
+  }
+
+  async updateRecalculatedOrderSums (orderId: string, orderSum: number, orderSumToPay: number) {
+    var lineRef = this.firestore.collection('orders').doc(orderId)
+    try {
+      await lineRef.set({
+        sumOrder: orderSum,
+        sumToPay: orderSumToPay
+      },{merge:true})
+      this.openSnackBar('Обновление элемента', 'завершено...');
+    } catch (error) {
+      console.error("Error updating <orders> collection: ", error);
     }
   }
 }
