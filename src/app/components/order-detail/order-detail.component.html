@@ -1,13 +1,5 @@
 <div id="print-section">
   <div *ngIf="orderId || selectedMenu?.length">
-    <!--<ul class="heroes">
-      <li *ngFor="let emp of selectedMenu" (click)="openDialog(emp)">
-        {{emp.name}} {{emp.price}} {{emp.qty}} {{emp.discount}}
-          <button mat-mini-fab color="warn" (click)="onDelete(emp.id)">
-            <i class="material-icons">delete</i>
-          </button>
-      </li>
-    </ul>-->
     <table mat-table [dataSource]="selectedMenu" class="mat-elevation-z8">
       <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef> Название </th>
@@ -59,28 +51,28 @@
 </div>
 
 <mat-form-field>
-    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Поиск">
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Поиск">
 </mat-form-field>
-  <mat-form-field style="text-align: center; width: 40px;">
-    <input matInput [(ngModel)]="orderNo" placeholder="Номер стола">
+<mat-form-field style="text-align: center; width: 40px;">
+  <input matInput [(ngModel)]="orderNo" placeholder="Номер стола">
 </mat-form-field>
 <mat-form-field style="text-align: center; width: 80px;">
-    <input matInput [(ngModel)]="orderDate" placeholder="Открыт стол">
+  <input matInput [(ngModel)]="orderDate" placeholder="Открыт стол">
 </mat-form-field> 
 <mat-form-field style="text-align: right; width: 60px;">
-    <input matInput type="number"  [(ngModel)]="orderSum" placeholder="Сумма счета">
+  <input matInput type="number"  [(ngModel)]="orderSum" placeholder="Сумма счета">
 </mat-form-field>
 <mat-form-field style="text-align: right; width: 40px;">
-    <input matInput type="number" [(ngModel)]="orderDiscount" placeholder="Дисконт">
+  <input matInput type="number" [(ngModel)]="orderDiscount" placeholder="Дисконт">
 </mat-form-field>
 <mat-form-field style="text-align: right; width: 60px;">
-    <input matInput type="number" [(ngModel)]="orderDiscountSum" placeholder="Сумма дисконта">
+  <input matInput type="number" [(ngModel)]="orderDiscountSum" placeholder="Сумма дисконта">
 </mat-form-field>
 <mat-form-field style="text-align: right; width: 60px;">
-    <input matInput type="number" [(ngModel)]="orderSumService" placeholder="Сумма обсл.">
+  <input matInput type="number" [(ngModel)]="orderSumService" placeholder="Сумма обсл.">
 </mat-form-field>
 <mat-form-field style="text-align: right; width: 80px;">
-    <input matInput type="number" [(ngModel)]="orderSumToPay" placeholder="Сумма к оплате">
+  <input matInput type="number" [(ngModel)]="orderSumToPay" placeholder="Сумма к оплате">
 </mat-form-field>
 <mat-form-field style="text-align: center; width: 40px;">
   <input matInput type="number" [(ngModel)]="orderGuests" placeholder="Гостей">
@@ -103,14 +95,14 @@
 
 <table mat-table [dataSource]="filteredMenulist" class="mat-elevation-z8">
   <!-- Add Column -->
-    <ng-container matColumnDef="add">
-        <th mat-header-cell *matHeaderCellDef>add</th>
-        <td mat-cell *matCellDef="let element">
-            <button mat-mini-fab color="warn" (click)="onAdd(element)">
-                <i class="material-icons">add</i>
-            </button>
-        </td>
-      </ng-container>
+  <ng-container matColumnDef="add">
+    <th mat-header-cell *matHeaderCellDef>add</th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-mini-fab color="warn" (click)="onAdd(element)">
+        <i class="material-icons">add</i>
+      </button>
+    </td>
+  </ng-container>
 
   <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef> Name </th>
