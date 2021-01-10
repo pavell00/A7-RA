@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthProvider, Theme, AuthProcessService } from 'ngx-auth-firebaseui';
-import { AngularFireAuth } from '@angular/fire/auth'
+import { AngularFireAuth } from '@angular/fire/auth';
+import { Routes, RouterModule, Router } from '@angular/router';
 
 @Component({
   selector: 'signin',
@@ -11,7 +12,7 @@ export class SigninComponent implements OnInit {
 
   providers = AuthProvider;
   themes = Theme;
-  constructor(public auth: AuthProcessService, public aa: AngularFireAuth) { }
+  constructor(public auth: AuthProcessService, private router: Router) { }
 
   ngOnInit(): void {
     /* this.auth.afa.idTokenResult.subscribe(
@@ -27,8 +28,8 @@ export class SigninComponent implements OnInit {
   }
 
   printUser(event) {
-    console.log(event);
-    //this.router.navigate(['locationname']);
+    //console.log(event);
+    this.router.navigate(['order-list']);
   }
 
   printError(event) {
