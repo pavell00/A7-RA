@@ -8,6 +8,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 import { Subscription, Observable, Subject } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatSlideToggleChange } from '@angular/material/slide-toggle';
+import { MatExpansionPanel } from '@angular/material/expansion';
 
 export interface DialogData {
   id: string;
@@ -20,7 +21,8 @@ export interface DialogData {
 @Component({
   selector: 'order-detail',
   templateUrl: './order-detail.component.html',
-  styleUrls: ['./order-detail.component.css']
+  styleUrls: ['./order-detail.component.css'],
+  viewProviders: [MatExpansionPanel]
 })
 export class OrderDetailComponent implements OnInit, AfterContentInit {
   menulist : menuItem[] = [];

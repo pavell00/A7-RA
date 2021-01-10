@@ -1,3 +1,50 @@
+<div>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>Детали заказа</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-form-field style="text-align: center; width: 40px;">
+      <input matInput [(ngModel)]="orderNo" placeholder="Номер стола">
+    </mat-form-field>
+    <mat-form-field style="text-align: center; width: 80px;">
+      <input matInput [(ngModel)]="orderDate" placeholder="Открыт стол">
+    </mat-form-field> 
+    <mat-form-field style="text-align: right; width: 60px;">
+      <input matInput type="number"  [(ngModel)]="orderSum" placeholder="Сумма счета">
+    </mat-form-field>
+    <mat-form-field style="text-align: right; width: 40px;">
+      <input matInput type="number" [(ngModel)]="orderDiscount" placeholder="Дисконт">
+    </mat-form-field>
+    <mat-form-field style="text-align: right; width: 60px;">
+      <input matInput type="number" [(ngModel)]="orderDiscountSum" placeholder="Сумма дисконта">
+    </mat-form-field>
+    <mat-form-field style="text-align: right; width: 60px;">
+      <input matInput type="number" [(ngModel)]="orderSumService" placeholder="Сумма обсл.">
+    </mat-form-field>
+    <mat-form-field style="text-align: right; width: 80px;">
+      <input matInput type="number" [(ngModel)]="orderSumToPay" placeholder="Сумма к оплате">
+    </mat-form-field>
+    <mat-form-field style="text-align: center; width: 40px;">
+      <input matInput type="number" [(ngModel)]="orderGuests" placeholder="Гостей">
+    </mat-form-field>
+    <mat-form-field style="text-align: center; width: 110px;">
+      <input matInput [(ngModel)]="printTime" placeholder="Время печати">
+    </mat-form-field>
+    <mat-form-field style="text-align: center; width: 50px;">
+      <input matInput [(ngModel)]="place" placeholder="Место">
+    </mat-form-field>
+    <mat-form-field style="text-align: center; width: 100px;">
+      <input matInput [(ngModel)]="waiter" placeholder="Официант">
+    </mat-form-field>
+    <mat-form-field style="text-align: center; width: 100px;">
+      <input matInput [(ngModel)]="printed" placeholder="Кассир">
+    </mat-form-field>
+    <mat-form-field style="text-align: center; width: 80px;">
+      <input matInput [(ngModel)]="orderCheck" placeholder="Номер чека">
+    </mat-form-field>
+  </mat-expansion-panel>
+</div>
+
 <div id="print-section">
   <div *ngIf="orderId || selectedMenu?.length">
     <table mat-table [dataSource]="selectedMenu" class="mat-elevation-z8">
@@ -56,48 +103,11 @@
   </div>
 </div>
 
-<mat-form-field>
-  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Поиск">
-</mat-form-field>
-<mat-form-field style="text-align: center; width: 40px;">
-  <input matInput [(ngModel)]="orderNo" placeholder="Номер стола">
-</mat-form-field>
-<mat-form-field style="text-align: center; width: 80px;">
-  <input matInput [(ngModel)]="orderDate" placeholder="Открыт стол">
-</mat-form-field> 
-<mat-form-field style="text-align: right; width: 60px;">
-  <input matInput type="number"  [(ngModel)]="orderSum" placeholder="Сумма счета">
-</mat-form-field>
-<mat-form-field style="text-align: right; width: 40px;">
-  <input matInput type="number" [(ngModel)]="orderDiscount" placeholder="Дисконт">
-</mat-form-field>
-<mat-form-field style="text-align: right; width: 60px;">
-  <input matInput type="number" [(ngModel)]="orderDiscountSum" placeholder="Сумма дисконта">
-</mat-form-field>
-<mat-form-field style="text-align: right; width: 60px;">
-  <input matInput type="number" [(ngModel)]="orderSumService" placeholder="Сумма обсл.">
-</mat-form-field>
-<mat-form-field style="text-align: right; width: 80px;">
-  <input matInput type="number" [(ngModel)]="orderSumToPay" placeholder="Сумма к оплате">
-</mat-form-field>
-<mat-form-field style="text-align: center; width: 40px;">
-  <input matInput type="number" [(ngModel)]="orderGuests" placeholder="Гостей">
-</mat-form-field>
-<mat-form-field style="text-align: center; width: 110px;">
-  <input matInput [(ngModel)]="printTime" placeholder="Время печати">
-</mat-form-field>
-<mat-form-field style="text-align: center; width: 50px;">
-  <input matInput [(ngModel)]="place" placeholder="Место">
-</mat-form-field>
-<mat-form-field style="text-align: center; width: 100px;">
-  <input matInput [(ngModel)]="waiter" placeholder="Официант">
-</mat-form-field>
-<mat-form-field style="text-align: center; width: 100px;">
-  <input matInput [(ngModel)]="printed" placeholder="Кассир">
-</mat-form-field>
-<mat-form-field style="text-align: center; width: 80px;">
-  <input matInput [(ngModel)]="orderCheck" placeholder="Номер чека">
-</mat-form-field>
+<div>
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Поиск">
+  </mat-form-field>
+</div>
 
 <table mat-table [dataSource]="filteredMenulist" class="mat-elevation-z8">
   <!-- Add Column -->

@@ -16,6 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 
@@ -65,7 +66,7 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
     MatFormFieldModule, MatTableModule, MatDialogModule,
     MatInputModule, //MatOptionModule, 
     MatSelectModule, MatCheckboxModule,
-    MatListModule,
+    MatListModule, MatExpansionModule,
     HttpClientModule,
         // Specify the ngx-auth-firebaseui library as an import
         NgxAuthFirebaseUIModule.forRoot(
